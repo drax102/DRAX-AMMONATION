@@ -1,0 +1,338 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.88),
+            rgba(120,0,0,0.75)
+        ),
+        url("../assets/images/8.jpg") no-repeat center fixed;
+    background-size: cover;
+    color: #eaeaea;
+    min-height: 100vh;
+}
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+.navbar-brand {
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.navbar-brand::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: red;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    margin-left: 12px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: red;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff2a2a !important;
+    text-shadow: 0 0 8px rgba(255,0,0,0.7);
+}
+.navbar-nav .nav-link.active {
+    animation: activeGlow 2.5s infinite;
+}
+
+@keyframes activeGlow {
+    0% { text-shadow: 0 0 6px rgba(255,0,0,0.4); }
+    50% { text-shadow: 0 0 14px rgba(255,0,0,0.9); }
+    100% { text-shadow: 0 0 6px rgba(255,0,0,0.4); }
+}
+
+.navbar-logo {
+    position: relative;
+}
+
+.navbar-logo::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,0,0,0.6);
+    animation: scan 2.5s infinite;
+}
+
+@keyframes scan {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+/* ===== HERO SECTION ===== */
+h1 {
+    color: #ff2a2a;
+    text-shadow: 0 0 15px rgba(255,0,0,0.7);
+}
+
+section p {
+    color: #f1f1f1;
+}
+
+/* ===== CARDS ===== */
+.card {
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    border: 1px solid darkred;
+    color: #eaeaea;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 30px rgba(255,0,0,0.6);
+}
+
+.card-title {
+    color: #ff2a2a;
+}
+
+.card-text {
+    color: #dddddd;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+    filter: drop-shadow(0 0 6px rgba(255,0,0,0.4));
+}
+
+/* ===== BUTTONS ===== */
+.btn-dark {
+    background: darkred;
+    border: none;
+}
+
+.btn-dark:hover {
+    background: #ff2a2a;
+    box-shadow: 0 0 15px red;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: rgba(0,0,0,0.95);
+    border-top: 2px solid darkred;
+}
+
+/* ===== LOGO ===== */
+.navbar img {
+    margin-right: 10px;
+}
+/* ===== INTERACTIVE INFO (COMMON FOR ALL GUNS) ===== */
+.gun-extra {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #ffcccc;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.card:hover .gun-extra {
+    max-height: 120px;
+    opacity: 1;
+}
+
+/* ===== HERO TITLE SECTION ===== */
+.hero-section {
+    background:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,0.9),
+            rgba(140,0,0,0.85),
+            rgba(0,0,0,0.9)
+        );
+    border-top: 2px solid darkred;
+    border-bottom: 2px solid darkred;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ff2a2a;
+    text-shadow:
+        0 0 10px rgba(255,0,0,0.7),
+        0 0 25px rgba(255,0,0,0.4);
+}
+
+.hero-section p {
+    max-width: 700px;
+    margin: 15px auto 0;
+    font-size: 1.1rem;
+    color: #f1f1f1;
+}
+.hero-section h1::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: darkred;
+    margin: 15px auto 0;
+}
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 8px rgba(255,0,0,0.4); }
+    50% { box-shadow: 0 0 18px rgba(255,0,0,0.8); }
+    100% { box-shadow: 0 0 8px rgba(255,0,0,0.4); }
+}
+.navbar-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding: 6px;
+    background: radial-gradient(circle, #2a0000, #000);
+    border: 1px solid darkred;
+    box-shadow:
+        0 0 8px rgba(255,0,0,0.6),
+        inset 0 0 6px rgba(255,0,0,0.4);
+    transition: all 0.35s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.12) rotate(-3deg);
+    box-shadow:
+        0 0 18px rgba(255,0,0,0.9),
+        inset 0 0 10px rgba(255,0,0,0.6);
+}
+
+.enquiry-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: darkred;
+    color: #fff;
+    font-size: 26px;
+    padding: 12px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 0 15px red;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px red; }
+    50% { box-shadow: 0 0 25px red; }
+    100% { box-shadow: 0 0 10px red; }
+}
+/* logo dropdown menu */
+/* ===== LOGO DROPDOWN MENU ===== */
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* dropdown hidden by default */
+.logo-dropdown {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 260px;
+    background: rgba(0,0,0,0.95);
+    border: 1px solid darkred;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+/* show on hover */
+.logo-wrapper:hover .logo-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* dropdown heading */
+.logo-dropdown h6 {
+    color: #ff2a2a;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+/* dropdown description */
+.logo-dropdown p {
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* links */
+.logo-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-dropdown ul li {
+    margin-bottom: 6px;
+}
+
+.logo-dropdown ul li a {
+    color: #eaeaea;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.logo-dropdown ul li a:hover {
+    color: #ff2a2a;
+}
+
+/* subtle top scan line */
+.logo-dropdown::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, red, transparent);
+}

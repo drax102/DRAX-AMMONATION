@@ -1,0 +1,91 @@
+/* ===== GLOBAL THEME ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background:
+        linear-gradient(rgba(0,0,0,0.85), rgba(120,0,0,0.65)),
+        url("../assets/images/8.jpg") no-repeat center/cover;
+    color: #eaeaea;
+    min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: rgba(0,0,0,0.95) !important;
+    border-bottom: 2px solid darkred;
+}
+
+.navbar-brand {
+    color: #ff2a2a !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: #eaeaea !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ff2a2a !important;
+}
+
+/* ===== HERO ===== */
+h1 {
+    color: #ff2a2a;
+    text-shadow: 0 0 15px rgba(255,0,0,0.7);
+}
+
+section p {
+    color: #f1f1f1;
+}
+
+/* ===== CARDS ===== */
+.card {
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    border: 1px solid darkred;
+    color: #eaeaea;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 30px rgba(255,0,0,0.6);
+}
+
+.card-title {
+    color: #ff2a2a;
+}
+
+.card-text {
+    color: #dddddd;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+    filter: drop-shadow(0 0 6px rgba(255,0,0,0.4));
+}
+
+/* ===== BUTTON ===== */
+.btn-dark {
+    background: darkred;
+    border: none;
+}
+
+.btn-dark:hover {
+    background: #ff2a2a;
+    box-shadow: 0 0 15px red;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: rgba(0,0,0,0.95);
+    border-top: 2px solid darkred;
+}
+
+/* ===== LOGO ===== */
+.navbar img {
+    margin-right: 10px;
+}

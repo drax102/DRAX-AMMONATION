@@ -3,9 +3,7 @@ Firearms of the World
 <p align="center"> <img src="assets/images/logogun.png" width="120" alt="DRAX Logo"/> </p> <p align="center"> <b>An interactive educational website showcasing firearms across the world</b><br> Built with HTML, CSS & Bootstrap </p> <p align="center"> <a href="#-live-preview">Live Preview</a> • <a href="#-features">Features</a> • <a href="#-pages">Pages</a> • <a href="#-tech-stack">Tech Stack</a> • <a href="#-setup">Setup</a> </p>
 🚀 Live Preview
 
-(Optional – enable when you deploy on GitHub Pages)
-
-🔗 https://drax102.github.io/DRAX-AMMONATION
+🔗(https://drax102.github.io/DRAX-AMMONATION/)
 
 🧠 About the Project
 

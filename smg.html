@@ -3,24 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shotguns</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
+<title>SMGs | Tactical Database</title>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark">
 <div class="logo-wrapper">
     <img src="assets/images/logogun.png" alt="Logo" class="navbar-logo">
-
     <div class="logo-dropdown">
         <h6>Firearms of the World</h6>
         <p>Explore firearms by type & origin</p>
-
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="shotgun.html">Shotguns</a></li>
@@ -35,301 +33,521 @@
 </div>
     <div class="container">
         <a class="navbar-brand" href="index.html">Firearms</a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="shotgun.html">Shotguns</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="rifle.html">Rifles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pistol.html">Pistols</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="smg.html">SMGs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sniper.html">Snipers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="machinegun.html">Machine Guns</a>
-                </li>
-                                <li class="nav-item">
-                    <a class="nav-link" href="enquiry.html">Enquiry</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="shotgun.html">Shotguns</a></li>
+                <li class="nav-item"><a class="nav-link" href="rifle.html">Rifles</a></li>
+                <li class="nav-item"><a class="nav-link" href="pistol.html">Pistols</a></li>
+                <li class="nav-item"><a class="nav-link active" href="smg.html">SMGs</a></li>
+                <li class="nav-item"><a class="nav-link" href="sniper.html">Snipers</a></li>
+                <li class="nav-item"><a class="nav-link" href="machinegun.html">Machine Guns</a></li>
+                <li class="nav-item"><a class="nav-link" href="enquiry.html">Enquiry</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
+<section class="hero-section text-center p-5">
+    <h1>Submachine Guns</h1>
+    <p>High-rate-of-fire weapons chambered in pistol calibers for Close Quarters Battle (CQB).</p>
+</section>
 
 <section class="container my-5">
 <div class="row g-4">
 
-<!-- 1 MP5 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/mp5.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">MP5</h5>
-<span class="badge bg-warning mb-2">Germany</span>
-<span class="badge bg-success mb-2">SMG</span>
-<p class="card-text">Compact weapon for close combat.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/mp5.jpg" class="card-img-top" alt="MP5">
+        <div class="card-body">
+            <h5 class="card-title">H&K MP5</h5>
+            <div class="mb-2">
+                <span class="badge bg-dark">GERMANY</span>
+                <span class="badge bg-success">SMG</span>
+                <span class="badge bg-secondary">9x19mm</span>
+            </div>
+            <p class="card-text">The gold standard for counter-terrorism units worldwide.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Accuracy</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Recoil Control</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Fire Rate (800 RPM)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 200m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 2.5 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 680mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>System:</strong> Roller-delayed</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The MP5 gained worldwide fame after Operation Nimrod (the Iranian Embassy Siege) in 1980. Its closed-bolt, roller-delayed blowback system makes it incredibly accurate for an SMG, minimizing collateral damage.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 9×19mm</li>
-<li class="list-group-item"><strong>Fire Rate:</strong> 800 RPM</li>
-<li class="list-group-item"><strong>Use:</strong> Special Forces</li>
-</ul>
-
-<div class="gun-extra">
-<p>Roller-delayed system</p>
-<p>High accuracy</p>
-<p>Elite forces weapon</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 2 Uzi -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/uzi.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Uzi</h5>
-<span class="badge bg-primary mb-2">Israel</span>
-<span class="badge bg-success mb-2">SMG</span>
-<p class="card-text">Iconic compact submachine gun.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/uzi.png" class="card-img-top" alt="Uzi">
+        <div class="card-body">
+            <h5 class="card-title">IMI Uzi</h5>
+            <div class="mb-2">
+                <span class="badge bg-primary">ISRAEL</span>
+                <span class="badge bg-success">SMG</span>
+                <span class="badge bg-secondary">9x19mm</span>
+            </div>
+            <p class="card-text">Rugged, simple, and reliable telescoping-bolt SMG.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Reliability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 98%"></div>
+                        </div>
+                        <label class="text-muted small">Portability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Rate of Fire (600 RPM)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 200m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 3.5 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 470mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Action:</strong> Open Bolt</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">Designed by Major Uziel Gal, the Uzi uses a telescoping bolt that wraps around the barrel, making the weapon extremely compact. It is one of the most widely sold SMGs in history, favored for vehicle crews and security.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 9×19mm</li>
-<li class="list-group-item"><strong>Fire Rate:</strong> 600 RPM</li>
-<li class="list-group-item"><strong>Use:</strong> Military & Police</li>
-</ul>
-
-<div class="gun-extra">
-<p>Simple blowback</p>
-<p>Compact design</p>
-<p>Worldwide adoption</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 3 FN P90 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/p90.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">FN P90</h5>
-<span class="badge bg-warning mb-2">Belgium</span>
-<span class="badge bg-success mb-2">SMG</span>
-<p class="card-text">Bullpup SMG with high-capacity magazine.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/p90.png" class="card-img-top" alt="FN P90">
+        <div class="card-body">
+            <h5 class="card-title">FN P90</h5>
+            <div class="mb-2">
+                <span class="badge bg-warning text-dark">BELGIUM</span>
+                <span class="badge bg-success">PDW</span>
+                <span class="badge bg-secondary">5.7x28mm</span>
+            </div>
+            <p class="card-text">Futuristic bullpup PDW with high armor penetration.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Capacity (50)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                        <label class="text-muted small">Penetration</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Mobility</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 200m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 2.6 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 505mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Feed:</strong> Top-mounted</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The P90 was created to defeat body armor that standard 9mm rounds could not penetrate. Its unique top-mounted magazine holds 50 rounds, and its bullpup design keeps it incredibly short for vehicle crews.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 5.7×28mm</li>
-<li class="list-group-item"><strong>Magazine:</strong> 50 rounds</li>
-<li class="list-group-item"><strong>Use:</strong> Special Forces</li>
-</ul>
-
-<div class="gun-extra">
-<p>Bullpup layout</p>
-<p>Armor penetration</p>
-<p>Top-mounted mag</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 4 MP7 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/mp7.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">MP7</h5>
-<span class="badge bg-warning mb-2">Germany</span>
-<span class="badge bg-success mb-2">SMG</span>
-<p class="card-text">PDW capable of defeating body armor.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/mp7.png" class="card-img-top" alt="H&K MP7">
+        <div class="card-body">
+            <h5 class="card-title">H&K MP7</h5>
+            <div class="mb-2">
+                <span class="badge bg-dark">GERMANY</span>
+                <span class="badge bg-success">PDW</span>
+                <span class="badge bg-secondary">4.6x30mm</span>
+            </div>
+            <p class="card-text">Ultra-compact PDW designed to pierce Kevlar.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Fire Rate (950 RPM)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Penetration</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Size</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 200m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 1.9 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 415mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Op:</strong> Gas-operated</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The MP7 bridges the gap between a machine pistol and a carbine. It uses a scaled-down rifle gas system (like the G36) instead of blowback, making it controllable and accurate despite its tiny size. Favored by SEAL Team 6.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 4.6×30mm</li>
-<li class="list-group-item"><strong>Fire Rate:</strong> 950 RPM</li>
-<li class="list-group-item"><strong>Use:</strong> Military</li>
-</ul>
-
-<div class="gun-extra">
-<p>Armor piercing</p>
-<p>Lightweight</p>
-<p>Modern PDW</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 5 PPSh-41 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/ppsh41.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">PPSh-41</h5>
-<span class="badge bg-danger mb-2">Russia</span>
-<span class="badge bg-success mb-2">SMG</span>
-<p class="card-text">WWII-era SMG with extreme fire rate.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/ppsh41.png" class="card-img-top" alt="PPSh-41">
+        <div class="card-body">
+            <h5 class="card-title">PPSh-41</h5>
+            <div class="mb-2">
+                <span class="badge bg-danger">RUSSIA</span>
+                <span class="badge bg-warning text-dark">HISTORIC</span>
+                <span class="badge bg-secondary">7.62x25mm</span>
+            </div>
+            <p class="card-text">"Papasha" - The legendary Soviet burp gun of WWII.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Fire Rate (1000 RPM)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Capacity (71)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                        <label class="text-muted small">Durability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 200m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 3.63 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 843mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Feed:</strong> 71 Drum</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">Produced in the millions during WWII, the PPSh-41 overwhelmed German forces with sheer volume of fire. Its chrome-lined barrel and stamped steel construction made it incredibly robust in the Russian winter.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 7.62×25mm</li>
-<li class="list-group-item"><strong>Fire Rate:</strong> 900 RPM</li>
-<li class="list-group-item"><strong>Use:</strong> Military (Historic)</li>
-</ul>
-
-<div class="gun-extra">
-<p>Drum magazine</p>
-<p>Mass production</p>
-<p>WWII icon</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 6 KRISS Vector -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/vector.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">KRISS Vector</h5>
-<span class="badge bg-primary mb-2">USA</span>
-<span class="badge bg-success mb-2">SMG</span>
-<p class="card-text">Low recoil SMG with unique design.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/vector.png" class="card-img-top" alt="KRISS Vector">
+        <div class="card-body">
+            <h5 class="card-title">KRISS Vector</h5>
+            <div class="mb-2">
+                <span class="badge bg-primary">USA</span>
+                <span class="badge bg-success">SMG</span>
+                <span class="badge bg-secondary">.45 ACP</span>
+            </div>
+            <p class="card-text">Advanced recoil mitigation system for controllability.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Recoil Control</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                        <label class="text-muted small">Fire Rate (1200 RPM)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 98%"></div>
+                        </div>
+                        <label class="text-muted small">Stopping Power</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 100m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 2.7 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 617mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Tech:</strong> Super V</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The Vector uses the "Super V" system, which directs the bolt's recoil energy downward rather than straight back. This nearly eliminates muzzle climb, allowing accurate fully automatic fire even with heavy .45 ACP rounds.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> .45 ACP</li>
-<li class="list-group-item"><strong>System:</strong> Recoil mitigation</li>
-<li class="list-group-item"><strong>Use:</strong> Law Enforcement</li>
-</ul>
-
-<div class="gun-extra">
-<p>Low muzzle climb</p>
-<p>Modern design</p>
-<p>High control</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 7 MAC-10 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/mac10.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">MAC-10</h5>
-<span class="badge bg-primary mb-2">USA</span>
-<span class="badge bg-success mb-2">SMG</span>
-<p class="card-text">Extremely compact SMG with high RPM.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/mac10.png" class="card-img-top" alt="MAC-10">
+        <div class="card-body">
+            <h5 class="card-title">MAC-10</h5>
+            <div class="mb-2">
+                <span class="badge bg-primary">USA</span>
+                <span class="badge bg-success">MACHINE PISTOL</span>
+                <span class="badge bg-secondary">.45 ACP</span>
+            </div>
+            <p class="card-text">"The Phone Booth Gun" - small, cheap, and extremely fast.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Fire Rate (1100 RPM)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Concealability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Accuracy</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 50m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 2.84 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 269mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Action:</strong> Open Bolt</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">A simple, stamped-steel box that spews bullets. It was designed to be cheap and effective for close-range combat. Often used with a large suppressor that doubles as a foregrip to control its wild recoil.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> .45 ACP</li>
-<li class="list-group-item"><strong>Fire Rate:</strong> 1100 RPM</li>
-<li class="list-group-item"><strong>Use:</strong> Military</li>
-</ul>
-
-<div class="gun-extra">
-<p>Very high fire rate</p>
-<p>Compact body</p>
-<p>CQB focused</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 8 CZ Scorpion EVO -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/scorpion.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">CZ Scorpion EVO</h5>
-<span class="badge bg-secondary mb-2">Czech Republic</span>
-<span class="badge bg-success mb-2">SMG</span>
-<p class="card-text">Modern polymer SMG platform.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/scorpion.png" class="card-img-top" alt="CZ Scorpion EVO 3">
+        <div class="card-body">
+            <h5 class="card-title">CZ Scorpion EVO 3</h5>
+            <div class="mb-2">
+                <span class="badge bg-secondary">CZECH</span>
+                <span class="badge bg-success">SMG</span>
+                <span class="badge bg-secondary">9x19mm</span>
+            </div>
+            <p class="card-text">Modern polymer SMG with excellent ergonomics.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Versatility</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Fire Rate (1150 RPM)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 92%"></div>
+                        </div>
+                        <label class="text-muted small">Value</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 200m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 2.77 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 670mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Mode:</strong> Semi/Burst/Auto</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The Scorpion EVO 3 is a lightweight, blowback-operated SMG. Its low cost, high reliability, and modularity have made it a hit with police forces and civilian sport shooters worldwide.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 9×19mm</li>
-<li class="list-group-item"><strong>Fire Rate:</strong> 1150 RPM</li>
-<li class="list-group-item"><strong>Use:</strong> Military & Police</li>
-</ul>
-
-<div class="gun-extra">
-<p>Polymer build</p>
-<p>Modular rails</p>
-<p>Modern ergonomics</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 9 Sterling -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/sterling.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Sterling</h5>
-<span class="badge bg-info mb-2">UK</span>
-<span class="badge bg-success mb-2">SMG</span>
-<p class="card-text">British SMG from Cold War era.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/sterling.png" class="card-img-top" alt="Sterling L2A3">
+        <div class="card-body">
+            <h5 class="card-title">Sterling L2A3</h5>
+            <div class="mb-2">
+                <span class="badge bg-info text-dark">UK</span>
+                <span class="badge bg-success">SMG</span>
+                <span class="badge bg-secondary">9x19mm</span>
+            </div>
+            <p class="card-text">British classic known for reliability (and Stormtroopers).</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Reliability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 98%"></div>
+                        </div>
+                        <label class="text-muted small">Accuracy</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 80%"></div>
+                        </div>
+                        <label class="text-muted small">Fire Rate (550 RPM)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 200m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 2.7 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 690mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Mag:</strong> Side Mounted</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">Replacing the Sten gun, the Sterling was built to a much higher standard. Its side-mounted magazine allows the user to get very low to the ground. It famously served as the base prop for the Star Wars E-11 Blaster.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 9×19mm</li>
-<li class="list-group-item"><strong>Mechanism:</strong> Roller bolt</li>
-<li class="list-group-item"><strong>Use:</strong> Military</li>
-</ul>
-
-<div class="gun-extra">
-<p>Side-folding stock</p>
-<p>Reliable design</p>
-<p>Cold War service</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 10 Thompson -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/thompson.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Thompson</h5>
-<span class="badge bg-primary mb-2">USA</span>
-<span class="badge bg-success mb-2">SMG</span>
-<p class="card-text">Historic SMG from World War II.</p>
-
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> .45 ACP</li>
-<li class="list-group-item"><strong>Magazine:</strong> Drum / Box</li>
-<li class="list-group-item"><strong>Use:</strong> Military (Historic)</li>
-</ul>
-
-<div class="gun-extra">
-<p>WWII icon</p>
-<p>Heavy firepower</p>
-<p>Classic design</p>
-</div>
-</div>
-</div>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/thompson.png" class="card-img-top" alt="Thompson M1A1">
+        <div class="card-body">
+            <h5 class="card-title">Thompson</h5>
+            <div class="mb-2">
+                <span class="badge bg-primary">USA</span>
+                <span class="badge bg-warning text-dark">HISTORIC</span>
+                <span class="badge bg-secondary">.45 ACP</span>
+            </div>
+            <p class="card-text">"The Chicago Typewriter" - A heavy, rapid-fire icon.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Stopping Power</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Fire Rate (700 RPM)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 70%"></div>
+                        </div>
+                        <label class="text-muted small">Weight (Heavy)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 150m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 4.9 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 810mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Feed:</strong> Stick/Drum</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">Originally designed for WWI trenches, the Thompson found fame with 1920s gangsters and glory with WWII GIs. It is heavy and expensive to make, but delivers a massive volume of heavy .45 caliber fire.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 </div>
 </section>
 
+<footer class="bg-dark text-white text-center p-3">
+    <p class="mb-1">© 2026 Firearms of the World</p>
+    <small>This project is for educational purposes only.</small>
+</footer>
 
+<a href="enquiry.html" class="enquiry-float">?</a>
 
-<footer class="text-center p-3"><small>Educational purpose only</small></footer>
 </body>
 </html>

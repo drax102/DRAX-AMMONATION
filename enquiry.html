@@ -3,17 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firearms of the World</title>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Enquiry | Secure Comms</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .tactical-form {
+            background: rgba(10, 10, 10, 0.95);
+            border: 2px solid #800000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tactical-form::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, #800000, #ff4d4d, #800000);
+        }
+
+        .form-control, .form-select {
+            background-color: #1a1a1a;
+            border: 1px solid #444;
+            color: #f0f0f0;
+            border-radius: 2px;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background-color: #000;
+            color: #fff;
+            border-color: #ff4d4d;
+            box-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
+        }
+
+        .form-label {
+            color: #ff4d4d;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
     
 <nav class="navbar navbar-expand-lg navbar-dark">
-    
 <div class="logo-wrapper">
     <img src="assets/images/logogun.png" alt="Logo" class="navbar-logo">
 
@@ -42,77 +84,74 @@
 
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="shotgun.html">Shotguns</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="rifle.html">Rifles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pistol.html">Pistols</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="smg.html">SMGs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sniper.html">Snipers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="machinegun.html">Machine Guns</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="enquiry.html">Enquiry</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="shotgun.html">Shotguns</a></li>
+                <li class="nav-item"><a class="nav-link" href="rifle.html">Rifles</a></li>
+                <li class="nav-item"><a class="nav-link" href="pistol.html">Pistols</a></li>
+                <li class="nav-item"><a class="nav-link" href="smg.html">SMGs</a></li>
+                <li class="nav-item"><a class="nav-link" href="sniper.html">Snipers</a></li>
+                <li class="nav-item"><a class="nav-link" href="machinegun.html">Machine Guns</a></li>
+                <li class="nav-item"><a class="nav-link active" href="enquiry.html">Enquiry</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<section class="text-center p-5 text-white">
-<h1>Enquiry & Suggestions</h1>
-<p>Ask questions or suggest new firearms to add</p>
+<section class="text-center p-5 text-white hero-section" style="border: none;">
+    <h1 style="text-shadow: 0 0 20px red;">SECURE COMMS UPLINK</h1>
+    <p>Submit intel, ask technical questions, or suggest new weaponry for the database.</p>
 </section>
 
 <section class="container my-5">
-<form id="enquiryForm" class="form-box mx-auto">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            
+            <form id="enquiryForm" class="tactical-form">
+                
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-user-secret me-2"></i>Operative Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter identification...">
+                </div>
 
-<div class="mb-3">
-<label class="form-label">Full Name</label>
-<input type="text" id="name" class="form-control">
-</div>
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-envelope me-2"></i>Comms Frequency (Email)</label>
+                    <input type="email" id="email" class="form-control" placeholder="name@example.com">
+                </div>
 
-<div class="mb-3">
-<label class="form-label">Email</label>
-<input type="email" id="email" class="form-control">
-</div>
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-list-ul me-2"></i>Transmission Type</label>
+                    <select id="type" class="form-select">
+                        <option value="" selected disabled>Select Protocol</option>
+                        <option>Weapon Suggestion</option>
+                        <option>Technical Question</option>
+                        <option>Report Bug / Error</option>
+                        <option>General Feedback</option>
+                    </select>
+                </div>
 
-<div class="mb-3">
-<label class="form-label">Enquiry Type</label>
-<select id="type" class="form-select">
-<option value="">Select</option>
-<option>Suggestion</option>
-<option>Question</option>
-<option>Feedback</option>
-</select>
-</div>
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-terminal me-2"></i>Intel / Message</label>
+                    <textarea id="message" rows="5" class="form-control" placeholder="Type your message here..."></textarea>
+                </div>
 
-<div class="mb-3">
-<label class="form-label">Message</label>
-<textarea id="message" rows="4" class="form-control"></textarea>
-</div>
+                <button type="submit" class="btn btn-dark w-100 py-3" style="font-size: 1.1rem; border: 1px solid #ff4d4d;">
+                    <i class="fas fa-paper-plane me-2"></i> TRANSMIT DATA
+                </button>
 
-<button type="submit" class="btn btn-danger w-100">
-Send Enquiry
-</button>
+                <p id="response" class="text-center mt-3" style="color: #ff4d4d; font-weight: bold;"></p>
 
-<p id="response" class="text-center mt-3"></p>
+            </form>
 
-</form>
+        </div>
+    </div>
 </section>
 
+<footer class="bg-dark text-white text-center p-3">
+    <p class="mb-1">© 2026 Firearms of the World</p>
+    <small>This project is for educational purposes only.</small>
+</footer>
+
 <script src="js/enquiry.js"></script>
+
 </body>
 </html>

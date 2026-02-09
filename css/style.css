@@ -11,30 +11,28 @@ body {
         ),
         url("../assets/images/bg2.jpg") no-repeat center fixed;
     background-size: cover;
-    color: #f0f0f0; /* Default text color is bright off-white */
+    color: #e0e0e0;
     min-height: 100vh;
     overflow-x: hidden;
     animation: systemBoot 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     opacity: 0;
 }
 
-/* Global Text Visibility Fixes */
-p, span, div, li, .card-text {
-    color: #e0e0e0; 
+/* Text Visibility Fixes */
+h1, h2, h3, h4, h5, h6, p, span, div, li, a, input, textarea, select, label, .form-control {
+    color: #e0e0e0 !important;
 }
 
-/* Override Bootstrap's muted text to be readable silver */
-.text-muted {
-    color: #b0b0b0 !important;
-}
+/* Exceptions for placeholders and muted text */
+::placeholder { color: #a0a0a0 !important; opacity: 1; }
+.text-muted { color: #b0b0b0 !important; }
 
-/* System Boot Animation */
 @keyframes systemBoot {
     0% { opacity: 0; transform: translateY(20px) scale(0.98); filter: blur(5px); }
     100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
 }
 
-/* Custom Scrollbar (Tactical Red) */
+/* Custom Scrollbar */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: #0a0a0a; border-left: 1px solid #330000; }
 ::-webkit-scrollbar-thumb { background: #bd0000; border-radius: 2px; border: 1px solid #ff4d4d; }
@@ -50,7 +48,7 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 .navbar {
     position: relative;
     z-index: 10000; 
-    background: rgba(0, 0, 0, 0.90);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(15px);
     box-shadow: 0 4px 20px rgba(0,0,0,0.9);
     border-bottom: 1px solid rgba(255, 0, 0, 0.3);
@@ -98,9 +96,9 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 .logo-dropdown ul { list-style: none; padding: 0; margin: 0; }
 .logo-dropdown ul li { margin-bottom: 8px; }
 .logo-dropdown ul li a {
-    color: #e0e0e0; font-size: 0.9rem; text-decoration: none; transition: 0.2s; display: block; padding: 5px 10px; border-radius: 4px;
+    color: #e0e0e0 !important; font-size: 0.9rem; text-decoration: none; transition: 0.2s; display: block; padding: 5px 10px; border-radius: 4px;
 }
-.logo-dropdown ul li a:hover { background: rgba(255, 77, 77, 0.2); color: #ff4d4d; padding-left: 15px; }
+.logo-dropdown ul li a:hover { background: rgba(255, 77, 77, 0.2); color: #ff4d4d !important; padding-left: 15px; }
 .logo-dropdown::before {
     content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
     background: linear-gradient(90deg, transparent, #ff4d4d, transparent); animation: scanLine 2s infinite;
@@ -116,14 +114,14 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 }
 .hero-section h1 {
     font-size: 3.5rem; letter-spacing: 3px; text-transform: uppercase;
-    color: #ff4d4d;
+    color: #ff4d4d !important;
     text-shadow: 2px 2px 0px #000, 0 0 25px rgba(255,0,0,0.4);
     font-weight: 800;
     transition: all 0.3s ease;
     cursor: default;
 }
 .hero-section h1:hover {
-    color: #fff;
+    color: #fff !important;
     text-shadow: 0 0 20px rgba(255, 77, 77, 0.9);
     transform: scale(1.02);
 }
@@ -135,26 +133,26 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 }
 
 /* =========================================
-   4. INTERACTIVE CARD SYSTEM
+   4. STABLE "IN-PLACE" CARD SYSTEM
    ========================================= */
 .row, section, .container { overflow: visible !important; position: relative; z-index: 1; }
 
 .card {
     position: relative;
-    height: 100%;
+    height: 100%; /* Important: Takes up space normally */
     background: rgba(15, 15, 15, 0.95);
     border: 1px solid rgba(255, 0, 0, 0.2);
     color: #e0e0e0;
     overflow: hidden;
     backdrop-filter: blur(5px);
     outline: none;
-    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Removed height transitions to avoid grid jumping */
     z-index: 1;
     display: flex;
     flex-direction: column;
 }
 
-/* Hover Preview State */
+/* Hover Effect (Desktop Only) */
 .card:hover {
     transform: translateY(-5px);
     border-color: #ff4d4d;
@@ -162,92 +160,80 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
     background: rgba(25, 25, 25, 1);
 }
 
-/* Clicked / Focus State (Modal View) */
+/* ACTIVE STATE (When clicked/focused) */
 .card:focus {
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    width: 85vw; max-width: 650px;
-    height: auto; max-height: 90vh;
-    overflow-y: auto;
-    z-index: 99999; /* Highest z-index */
-    background: #080808;
-    border: 2px solid #ff4d4d;
-    box-shadow:
-        0 0 0 100vmax rgba(0, 0, 0, 0.96), /* Background Dimmer */
-        0 0 60px rgba(255, 0, 0, 0.2);
+    /* No Fixed Position! Just a highlight style */
+    border-color: #ff4d4d;
+    background: #000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    outline: none;
 }
 
-/* Card Image - Perfect Fit */
+/* Card Image */
 .card-img-top {
     height: 220px; 
     width: 100%; 
-    object-fit: contain; /* Ensures full weapon is seen */
+    object-fit: contain; 
     padding: 20px;
-    background-color: #050505; /* Seamless black background */
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%);
+    background-color: #050505; 
     border-bottom: 3px solid #cc0000;
     transition: all 0.4s ease;
 }
-.card:focus .card-img-top { height: 280px; background-color: #000; }
 
-/* Card Text & Body */
+/* Card Text */
 .card-body { padding: 20px; position: relative; z-index: 2; }
 
 .card-title {
     color: #ff4d4d !important; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
     text-shadow: 1px 1px 1px #000;
 }
-.card:focus .card-title { color: #fff !important; text-shadow: 0 0 15px #ff0000; font-size: 2.2rem; }
 
 .badge {
     font-size: 0.85em; letter-spacing: 0.5px; padding: 6px 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    color: #fff; 
+    color: #fff !important; 
 }
 
-/* Expanded Info Section (Hidden by default) */
+.card-text { color: #cccccc !important; font-size: 1rem; line-height: 1.5; margin-bottom: 15px; }
+
+/* EXPANDED INFO SECTION (The magic part) */
 .gun-extra {
-    max-height: 0; opacity: 0; overflow: hidden;
-    transition: all 0.3s ease;
+    max-height: 0; 
+    opacity: 0; 
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease; /* Smooth expansion */
     border-top: 1px solid #333;
     margin-top: 0;
 }
+
+/* When focused, just expand the height! */
 .card:focus .gun-extra {
-    max-height: 600px;
+    max-height: 800px; /* Allow enough height for content */
     opacity: 1;
-    margin-top: 15px; padding: 20px;
+    margin-top: 15px; 
+    padding: 20px;
     background: #111111;
     border: 1px solid #333;
     border-radius: 6px;
 }
+
 .gun-extra h6 { color: #ff4d4d !important; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px; }
 .gun-extra p { color: #e0e0e0 !important; font-size: 0.95rem; line-height: 1.7; }
-.gun-extra li { color: #dcdcdc; margin-bottom: 8px; border-bottom: 1px solid #222; padding-bottom: 4px; }
-.gun-extra strong { color: #fff; }
+.gun-extra li { color: #dcdcdc !important; margin-bottom: 8px; border-bottom: 1px solid #222; padding-bottom: 4px; }
+.gun-extra strong { color: #fff !important; }
 
 /* Progress Bars */
 .progress { background-color: #2a2a2a; border-radius: 2px; }
 .progress-bar { box-shadow: 0 0 5px rgba(255,0,0,0.5); }
 
-/* Scanner Effect Animation */
-.card::before {
-    content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
-    transform: skewX(-25deg); transition: 0.5s; pointer-events: none;
-}
-.card:focus::before { animation: scanOnce 1s ease forwards; }
-
-@keyframes scanOnce { 0% { left: -100%; } 100% { left: 200%; } }
-
-/* Close Instruction Text */
+/* Close Instruction (Modified to be less obtrusive) */
 .card:focus::after {
-    content: "[ CLICK OUTSIDE TO CLOSE ]";
+    content: "[ SELECTED ]"; /* Changed text since we aren't closing a modal anymore */
     position: absolute; bottom: 10px; right: 15px;
-    color: #ff4d4d; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px;
-    animation: blink 2s infinite; pointer-events: none;
+    color: #ff4d4d !important; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
+    pointer-events: none;
+    opacity: 0.5;
 }
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
 /* =========================================
    5. ENQUIRY FORM STYLES
@@ -266,17 +252,17 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
     background: linear-gradient(90deg, #800000, #ff4d4d, #800000);
 }
 .form-control, .form-select {
-    background-color: #1a1a1a;
-    border: 1px solid #444;
-    color: #f0f0f0;
+    background-color: #1a1a1a !important;
+    border: 1px solid #444 !important;
+    color: #f0f0f0 !important;
 }
 .form-control:focus, .form-select:focus {
-    background-color: #000;
-    color: #fff;
-    border-color: #ff4d4d;
-    box-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #ff4d4d !important;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.3) !important;
 }
-.form-label { color: #ff4d4d; font-weight: 600; text-transform: uppercase; }
+.form-label { color: #ff4d4d !important; font-weight: 600; text-transform: uppercase; }
 
 /* =========================================
    6. BUTTONS & FOOTER
@@ -284,7 +270,7 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 .btn-dark {
     background: linear-gradient(45deg, #800000, #400000);
     border: 1px solid rgba(255,255,255,0.1);
-    color: #fff; font-weight: 600;
+    color: #fff !important; font-weight: 600;
     text-transform: uppercase; letter-spacing: 1px;
     transition: all 0.3s ease;
 }
@@ -292,7 +278,7 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
     background: #ff4d4d;
     box-shadow: 0 0 20px rgba(255,0,0,0.6);
     border-color: #fff;
-    color: #fff;
+    color: #fff !important;
 }
 
 footer {
@@ -304,40 +290,35 @@ footer {
 
 /* Floating Action Button */
 .enquiry-float {
-    position: fixed; bottom: 30px; right: 30px; background: #800000; color: #fff;
+    position: fixed; bottom: 30px; right: 30px; background: #800000; color: #fff !important;
     font-size: 24px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
     border-radius: 50%; text-decoration: none; box-shadow: 0 0 15px #ff0000; z-index: 1000; transition: all 0.3s ease;
 }
 .enquiry-float:hover { transform: scale(1.1) rotate(90deg); background: #ff4d4d; box-shadow: 0 0 30px #ff4d4d; color: white; }
 
 /* =========================================
-   7. MOBILE OPTIMIZATIONS
+   7. MOBILE OPTIMIZATIONS (Simplified)
    ========================================= */
 @media (max-width: 768px) {
-    /* Hero Section */
+    /* Navbar Visibility */
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.98);
+        padding: 20px;
+        border-bottom: 2px solid #800000;
+    }
+
+    /* Hero Text */
     .hero-section h1 { font-size: 2.2rem !important; letter-spacing: 1px; }
     .hero-section p { font-size: 1rem; padding: 0 15px; }
 
-    /* Pop-up Card Logic */
-    .card:focus {
-        width: 95vw;
-        max-height: 85vh;
-        border-width: 1px;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .card:focus .card-title { font-size: 1.8rem; }
-    .card:focus .card-img-top { height: 200px; padding: 10px; }
-
-    /* Close Instruction visibility */
-    .card:focus::after {
-        font-size: 0.6rem;
-        bottom: 5px; right: 10px;
-        background: rgba(0,0,0,0.5); /* Background to ensure readability over content */
-        padding: 2px 5px;
-        border-radius: 4px;
+    /* Card Mobile Tweaks (Just make sure image is small enough) */
+    .card-img-top { height: 180px; padding: 10px; }
+    
+    /* Ensure the expanded area is visible */
+    .card:focus .gun-extra {
+        padding: 15px;
     }
     
+    /* Floating button position */
     .enquiry-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 20px; }
 }

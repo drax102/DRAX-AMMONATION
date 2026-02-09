@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firearms of the World</title>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Firearms Database | Main Hub</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Specific tweaks for the Home Page Cards */
+        .home-card-footer {
+            border-top: 1px solid #333;
+            padding-top: 15px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        /* Make the images on home page consistent and high-quality */
+        .card-img-top {
+            height: 200px;
+            object-fit: cover; /* Fills the box nicely */
+            object-position: center;
+        }
+    </style>
 </head>
 
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark">
-    
 <div class="logo-wrapper">
     <img src="assets/images/logogun.png" alt="Logo" class="navbar-logo">
-
     <div class="logo-dropdown">
         <h6>Firearms of the World</h6>
         <p>Explore firearms by type & origin</p>
-
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="shotgun.html">Shotguns</a></li>
@@ -36,113 +54,133 @@
 </div>
     <div class="container">
         <a class="navbar-brand" href="index.html">Firearms</a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="shotgun.html">Shotguns</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="rifle.html">Rifles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pistol.html">Pistols</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="smg.html">SMGs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sniper.html">Snipers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="machinegun.html">Machine Guns</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="enquiry.html"></a>
-                </li>
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="shotgun.html">Shotguns</a></li>
+                <li class="nav-item"><a class="nav-link" href="rifle.html">Rifles</a></li>
+                <li class="nav-item"><a class="nav-link" href="pistol.html">Pistols</a></li>
+                <li class="nav-item"><a class="nav-link" href="smg.html">SMGs</a></li>
+                <li class="nav-item"><a class="nav-link" href="sniper.html">Snipers</a></li>
+                <li class="nav-item"><a class="nav-link" href="machinegun.html">Machine Guns</a></li>
+                <li class="nav-item"><a class="nav-link" href="enquiry.html">Enquiry</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-
-<section class="text-white text-center p-5">
-    <h1>Firearms across the World</h1>
-    <p>Explore firearms categorized by type and country of origin.</p>
+<section class="hero-section text-center p-5">
+    <h1 style="font-size: 4rem; letter-spacing: 5px;">GLOBAL ARMORY</h1>
+    <p class="lead" style="color: #ff4d4d; letter-spacing: 2px;">
+        <i class="fas fa-satellite-dish me-2"></i> DATABASE CONNECTION ESTABLISHED
+    </p>
+    <p class="text-muted">Select a weapon classification below to access classified intel.</p>
 </section>
 
 <section class="container my-5">
     <div class="row g-4">
 
         <div class="col-md-4">
-            <div class="card shadow text-center">
+            <div class="card shadow text-center h-100" tabindex="0">
                 <img src="assets/images/shotgun-icon-simple-style-vector.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Shotguns</h5>
-                    <p class="card-text">Pump, semi-automatic and combat shotguns</p>
-                    <a href="shotgun.html" class="btn btn-dark">View</a>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-skull-crossbones me-2"></i>SHOTGUNS</h5>
+                    <p class="card-text">Close-quarters combat (CQC) and breaching weaponry. High impact, short range.</p>
+                    
+                    <div class="home-card-footer">
+                        <span class="text-danger"><i class="fas fa-lock-open me-1"></i> ACCESS GRANTED</span>
+                        <span>10 FILES</span>
+                    </div>
+                    
+                    <a href="shotgun.html" class="btn btn-dark mt-3 w-100">ACCESS DATA</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow text-center">
+            <div class="card shadow text-center h-100" tabindex="0">
                 <img src="assets/images/RIFLES.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Rifles</h5>
-                    <p class="card-text">Assault, battle and hunting rifles</p>
-                    <a href="rifle.html" class="btn btn-dark">View</a>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-crosshairs me-2"></i>ASSAULT RIFLES</h5>
+                    <p class="card-text">Standard infantry weapons. Balanced for range, accuracy, and volume of fire.</p>
+                    
+                    <div class="home-card-footer">
+                        <span class="text-danger"><i class="fas fa-lock-open me-1"></i> ACCESS GRANTED</span>
+                        <span>10 FILES</span>
+                    </div>
+
+                    <a href="rifle.html" class="btn btn-dark mt-3 w-100">ACCESS DATA</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow text-center">
+            <div class="card shadow text-center h-100" tabindex="0">
                 <img src="assets/images/PISTOL.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Pistols</h5>
-                    <p class="card-text">Semi-automatic pistols and revolvers</p>
-                    <a href="pistol.html" class="btn btn-dark">View</a>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-hand-holding-medical me-2"></i>PISTOLS</h5>
+                    <p class="card-text">Secondary sidearms for self-defense and backup utility.</p>
+                    
+                    <div class="home-card-footer">
+                        <span class="text-danger"><i class="fas fa-lock-open me-1"></i> ACCESS GRANTED</span>
+                        <span>10 FILES</span>
+                    </div>
+
+                    <a href="pistol.html" class="btn btn-dark mt-3 w-100">ACCESS DATA</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow text-center">
+            <div class="card shadow text-center h-100" tabindex="0">
                 <img src="assets/images/SMG.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">SMGs</h5>
-                    <p class="card-text">Compact automatic firearms</p>
-                    <a href="smg.html" class="btn btn-dark">View</a>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-bolt me-2"></i>SUBMACHINE GUNS</h5>
+                    <p class="card-text">High rate-of-fire compact weapons for special operations.</p>
+                    
+                    <div class="home-card-footer">
+                        <span class="text-danger"><i class="fas fa-lock-open me-1"></i> ACCESS GRANTED</span>
+                        <span>10 FILES</span>
+                    </div>
+
+                    <a href="smg.html" class="btn btn-dark mt-3 w-100">ACCESS DATA</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow text-center">
+            <div class="card shadow text-center h-100" tabindex="0">
                 <img src="assets/images/SNIPER.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Sniper Rifles</h5>
-                    <p class="card-text">Long-range precision rifles</p>
-                    <a href="sniper.html" class="btn btn-dark">View</a>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-eye me-2"></i>SNIPER RIFLES</h5>
+                    <p class="card-text">Precision instruments for long-range target interdiction.</p>
+                    
+                    <div class="home-card-footer">
+                        <span class="text-danger"><i class="fas fa-lock-open me-1"></i> ACCESS GRANTED</span>
+                        <span>10 FILES</span>
+                    </div>
+
+                    <a href="sniper.html" class="btn btn-dark mt-3 w-100">ACCESS DATA</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow text-center">
-                <img src="assets/images/MACHINE (1).png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Machine Guns</h5>
-                    <p class="card-text">Automatic heavy military firearms</p>
-                    <a href="machinegun.html" class="btn btn-dark">View</a>
+            <div class="card shadow text-center h-100" tabindex="0">
+                <img src="assets/images/MACHINE (2).png" class="card-img-top">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-fire-alt me-2"></i>MACHINE GUNS</h5>
+                    <p class="card-text">Heavy belt-fed weaponry for squad support and suppression.</p>
+                    
+                    <div class="home-card-footer">
+                        <span class="text-danger"><i class="fas fa-lock-open me-1"></i> ACCESS GRANTED</span>
+                        <span>11 FILES</span>
+                    </div>
+
+                    <a href="machinegun.html" class="btn btn-dark mt-3 w-100">ACCESS DATA</a>
                 </div>
             </div>
         </div>
@@ -150,10 +188,12 @@
     </div>
 </section>
 
-<footer class="text-white text-center p-3">
-    <p class="mb-1">© 2026 Firearms of the World</p>
-    <small>Educational purpose only</small>
+<footer class="bg-dark text-white text-center p-4 mt-5" style="border-top: 3px solid #800000;">
+    <p class="mb-1 fw-bold">© 2026 Firearms of the World | TACTICAL DB</p>
+    <small class="text-muted">CLASSIFIED - FOR EDUCATIONAL USE ONLY</small>
 </footer>
+
+<a href="enquiry.html" class="enquiry-float">?</a>
 
 </body>
 </html>

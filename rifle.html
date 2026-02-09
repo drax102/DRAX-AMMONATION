@@ -3,24 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Snipers</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
+<title>Rifles | Tactical Database</title>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark">
 <div class="logo-wrapper">
     <img src="assets/images/logogun.png" alt="Logo" class="navbar-logo">
-
     <div class="logo-dropdown">
         <h6>Firearms of the World</h6>
         <p>Explore firearms by type & origin</p>
-
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="shotgun.html">Shotguns</a></li>
@@ -35,244 +33,521 @@
 </div>
     <div class="container">
         <a class="navbar-brand" href="index.html">Firearms</a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="shotgun.html">Shotguns</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="rifle.html">Rifles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pistol.html">Pistols</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="smg.html">SMGs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="sniper.html">Snipers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="machinegun.html">Machine Guns</a>
-                </li>
-                                <li class="nav-item">
-                    <a class="nav-link" href="enquiry.html">Enquiry</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="shotgun.html">Shotguns</a></li>
+                <li class="nav-item"><a class="nav-link active" href="rifle.html">Rifles</a></li>
+                <li class="nav-item"><a class="nav-link" href="pistol.html">Pistols</a></li>
+                <li class="nav-item"><a class="nav-link" href="smg.html">SMGs</a></li>
+                <li class="nav-item"><a class="nav-link" href="sniper.html">Snipers</a></li>
+                <li class="nav-item"><a class="nav-link" href="machinegun.html">Machine Guns</a></li>
+                <li class="nav-item"><a class="nav-link" href="enquiry.html">Enquiry</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<section class="text-white text-center p-5">
-<h1>Sniper Rifles</h1>
-<p>Precision long-range firearms</p>
+<section class="hero-section text-center p-5">
+    <h1>Assault Rifles</h1>
+    <p>The standard infantry weapon. Balanced for range, accuracy, and volume of fire.</p>
 </section>
 
 <section class="container my-5">
 <div class="row g-4">
 
-<!-- 1 AWM -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/awm.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">AWM</h5>
-<span class="badge bg-info mb-2">UK</span>
-<span class="badge bg-success mb-2">Bolt Action</span>
-<p class="card-text">Extremely accurate long-range sniper rifle.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/ak47.jpg" class="card-img-top" alt="AK-47">
+        <div class="card-body">
+            <h5 class="card-title">AK-47</h5>
+            <div class="mb-2">
+                <span class="badge bg-danger">RUSSIA</span>
+                <span class="badge bg-success">ASSAULT RIFLE</span>
+                <span class="badge bg-secondary">7.62x39mm</span>
+            </div>
+            <p class="card-text">The most widely produced and recognizable firearm in history.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Reliability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                        <label class="text-muted small">Damage</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                        <label class="text-muted small">Accuracy</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 300m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 3.47 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 880mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Action:</strong> Gas-operated</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">Designed by Mikhail Kalashnikov in 1947, the AK-47 is legendary for its ability to function in mud, sand, and water. Its loose tolerances make it less accurate than Western rifles, but infinitely more reliable in harsh conditions.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="gun-extra">
-<p>Caliber: .338 Lapua</p>
-<p>Effective Range: 1500m</p>
-<p>Role: Precision Sniping</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 2 Barrett M82 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/barrett.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Barrett M82</h5>
-<span class="badge bg-primary mb-2">USA</span>
-<span class="badge bg-success mb-2">Anti-Material</span>
-<p class="card-text">Long-range high-power sniper rifle.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/m4.jpg" class="card-img-top" alt="M4 Carbine">
+        <div class="card-body">
+            <h5 class="card-title">M4 Carbine</h5>
+            <div class="mb-2">
+                <span class="badge bg-primary">USA</span>
+                <span class="badge bg-success">CARBINE</span>
+                <span class="badge bg-secondary">5.56 NATO</span>
+            </div>
+            <p class="card-text">The versatile standard-issue rifle of the US Military.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Accuracy</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Modularity</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                        <label class="text-muted small">Mobility</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 500m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 2.88 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 840mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Rails:</strong> Picatinny</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">A shorter, lighter evolution of the M16A2, the M4 Carbine excels in Close Quarters Battle (CQB). Its extensive rail system allows soldiers to mount optics, lasers, and grenade launchers, making it the most modular rifle in service.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="gun-extra">
-<p>Caliber: .50 BMG</p>
-<p>Effective Range: 1800m</p>
-<p>Role: Anti-Material</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 3 Dragunov SVD -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/svd.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Dragunov SVD</h5>
-<span class="badge bg-danger mb-2">Russia</span>
-<span class="badge bg-success mb-2">Designated Marksman</span>
-<p class="card-text">Semi-automatic sniper used by infantry units.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/scar.jpg" class="card-img-top" alt="FN SCAR-L">
+        <div class="card-body">
+            <h5 class="card-title">FN SCAR-L</h5>
+            <div class="mb-2">
+                <span class="badge bg-warning text-dark">BELGIUM</span>
+                <span class="badge bg-success">ASSAULT RIFLE</span>
+                <span class="badge bg-secondary">5.56 NATO</span>
+            </div>
+            <p class="card-text">Special Operations Forces Combat Assault Rifle - Light.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Recoil Control</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Durability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                        <label class="text-muted small">Cost</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 600m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 3.29 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 850mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Stock:</strong> Folding</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">Developed for USSOCOM, the SCAR features a monolithic upper receiver and polymer lower. It is known for its low recoil impulse and adaptability, though it is significantly more expensive than the M4 platform.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="gun-extra">
-<p>Caliber: 7.62×54mmR</p>
-<p>Effective Range: 800m</p>
-<p>Role: DMR</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 4 CheyTac M200 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/m200.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">CheyTac M200</h5>
-<span class="badge bg-primary mb-2">USA</span>
-<span class="badge bg-success mb-2">Extreme Range</span>
-<p class="card-text">Designed for ultra-long-range engagements.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/g36.jpg" class="card-img-top" alt="G36">
+        <div class="card-body">
+            <h5 class="card-title">H&K G36</h5>
+            <div class="mb-2">
+                <span class="badge bg-dark">GERMANY</span>
+                <span class="badge bg-success">ASSAULT RIFLE</span>
+                <span class="badge bg-secondary">5.56 NATO</span>
+            </div>
+            <p class="card-text">Advanced polymer rifle with integrated optical sights.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Weight</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 80%"></div>
+                        </div>
+                        <label class="text-muted small">Accuracy</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                        <label class="text-muted small">Ergonomics</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 800m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 3.63 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 999mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Material:</strong> Polymer</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The G36 replaced the G3 in the German Bundeswehr. It uses extensive fiber-reinforced polymer to save weight and includes a built-in 3x optical scope in the carry handle, a revolutionary feature at its release.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="gun-extra">
-<p>Caliber: .408 CheyTac</p>
-<p>Effective Range: 2200m</p>
-<p>Role: Extreme Sniping</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 5 L96A1 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/l96a1.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">L96A1</h5>
-<span class="badge bg-info mb-2">UK</span>
-<span class="badge bg-success mb-2">Bolt Action</span>
-<p class="card-text">British military sniper rifle.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/famas.png" class="card-img-top" alt="FAMAS">
+        <div class="card-body">
+            <h5 class="card-title">FAMAS F1</h5>
+            <div class="mb-2">
+                <span class="badge bg-info text-dark">FRANCE</span>
+                <span class="badge bg-success">BULLPUP</span>
+                <span class="badge bg-secondary">5.56 NATO</span>
+            </div>
+            <p class="card-text">"Le Clairon" (The Bugle) - France's iconic bullpup rifle.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Fire Rate (1000 RPM)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Maneuverability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Reliability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 450m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 3.61 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 757mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Action:</strong> Lever-delayed</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The FAMAS features a bullpup layout, where the magazine is behind the trigger. This allows for a full-length barrel in a compact weapon. It is famous for its extremely high rate of fire for an assault rifle.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="gun-extra">
-<p>Caliber: 7.62×51mm</p>
-<p>Effective Range: 800m</p>
-<p>Role: Military Sniper</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 6 M24 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/m24.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">M24</h5>
-<span class="badge bg-primary mb-2">USA</span>
-<span class="badge bg-success mb-2">Bolt Action</span>
-<p class="card-text">Standard sniper rifle of US Army.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/aug.png" class="card-img-top" alt="Steyr AUG">
+        <div class="card-body">
+            <h5 class="card-title">Steyr AUG A3</h5>
+            <div class="mb-2">
+                <span class="badge bg-primary">AUSTRIA</span>
+                <span class="badge bg-success">BULLPUP</span>
+                <span class="badge bg-secondary">5.56 NATO</span>
+            </div>
+            <p class="card-text">A futuristic modular weapon system.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Modularity</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Balance</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                        <label class="text-muted small">Accuracy</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 500m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 3.6 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 790mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Feature:</strong> Swappable Barrel</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The Armee-Universal-Gewehr (AUG) was the first commercially successful bullpup. Its modular design allows a soldier to swap barrels in seconds, converting it from a carbine to a light machine gun.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="gun-extra">
-<p>Caliber: 7.62×51mm</p>
-<p>Effective Range: 800m</p>
-<p>Role: Military Sniper</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 7 PSG1 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/psg1,png.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">PSG1</h5>
-<span class="badge bg-warning mb-2">Germany</span>
-<span class="badge bg-success mb-2">Precision</span>
-<p class="card-text">Highly accurate semi-auto sniper rifle.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/tar21.png" class="card-img-top" alt="TAR-21">
+        <div class="card-body">
+            <h5 class="card-title">IWI Tavor TAR-21</h5>
+            <div class="mb-2">
+                <span class="badge bg-primary">ISRAEL</span>
+                <span class="badge bg-success">BULLPUP</span>
+                <span class="badge bg-secondary">5.56 NATO</span>
+            </div>
+            <p class="card-text">Designed specifically for urban combat (CQB).</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Compactness</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                        <label class="text-muted small">Durability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Ergonomics</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 550m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 3.27 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 720mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Action:</strong> Long-stroke Piston</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The Tavor Assault Rifle - 21st Century (TAR-21) replaced the M16 in IDF service. It was designed from the ground up for soldiers exiting armored vehicles and clearing buildings in tight urban environments.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="gun-extra">
-<p>Caliber: 7.62×51mm</p>
-<p>Effective Range: 800m</p>
-<p>Role: Police Sniper</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 8 Steyr SSG 08 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/ssg08.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Steyr SSG 08</h5>
-<span class="badge bg-primary mb-2">Austria</span>
-<span class="badge bg-success mb-2">Bolt Action</span>
-<p class="card-text">Modern modular sniper rifle.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/qbz-95.png" class="card-img-top" alt="QBZ-95">
+        <div class="card-body">
+            <h5 class="card-title">QBZ-95</h5>
+            <div class="mb-2">
+                <span class="badge bg-danger">CHINA</span>
+                <span class="badge bg-success">BULLPUP</span>
+                <span class="badge bg-secondary">5.8x42mm</span>
+            </div>
+            <p class="card-text">The standard service rifle of the People's Liberation Army.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Ballistics</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                        <label class="text-muted small">Reliability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 80%"></div>
+                        </div>
+                        <label class="text-muted small">Weight</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 400m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 3.25 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 745mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Ammo:</strong> DBP87</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The QBZ-95 fires a unique Chinese 5.8mm cartridge, claimed to have better ballistics than both NATO 5.56 and Soviet 5.45. It features a polymer construction and is strictly used by Chinese forces.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="gun-extra">
-<p>Caliber: .338 Lapua</p>
-<p>Effective Range: 1500m</p>
-<p>Role: Precision Sniping</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 9 Accuracy AXMC -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/axmc.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Accuracy AXMC</h5>
-<span class="badge bg-info mb-2">UK</span>
-<span class="badge bg-success mb-2">Multi-Caliber</span>
-<p class="card-text">Modular sniper rifle platform.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/l85a2.png" class="card-img-top" alt="L85A2">
+        <div class="card-body">
+            <h5 class="card-title">SA80 / L85A2</h5>
+            <div class="mb-2">
+                <span class="badge bg-info text-dark">UK</span>
+                <span class="badge bg-success">BULLPUP</span>
+                <span class="badge bg-secondary">5.56 NATO</span>
+            </div>
+            <p class="card-text">The troubled British rifle redeemed by German engineering.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Accuracy</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Reliability (A2)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Weight</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 500m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 3.82 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 785mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Optic:</strong> SUSAT / ACOG</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The original L85A1 was notorious for jamming. Heckler & Koch (then British-owned) completely rebuilt the internal mechanism to create the A2 variant, which is now considered one of the most accurate service rifles in the world.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="gun-extra">
-<p>Caliber: Multi</p>
-<p>Effective Range: 1500m</p>
-<p>Role: Military Sniper</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 10 VSS Vintorez -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/vss.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">VSS Vintorez</h5>
-<span class="badge bg-danger mb-2">Russia</span>
-<span class="badge bg-success mb-2">Suppressed</span>
-<p class="card-text">Integrated suppressed sniper rifle.</p>
-
-<div class="gun-extra">
-<p>Caliber: 9×39mm</p>
-<p>Effective Range: 400m</p>
-<p>Role: Stealth Operations</p>
-</div>
-</div>
-</div>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/galil.jpg" class="card-img-top" alt="Galil ACE">
+        <div class="card-body">
+            <h5 class="card-title">Galil ACE</h5>
+            <div class="mb-2">
+                <span class="badge bg-primary">ISRAEL</span>
+                <span class="badge bg-success">ASSAULT RIFLE</span>
+                <span class="badge bg-secondary">7.62x39mm</span>
+            </div>
+            <p class="card-text">A modernized, ergonomic evolution of the AK platform.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Reliability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 98%"></div>
+                        </div>
+                        <label class="text-muted small">Ergonomics</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                        <label class="text-muted small">Versatility</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 400m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 3.4 kg</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 875mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Action:</strong> Long-stroke Gas</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The Galil ACE takes the legendary reliability of the original Galil (and by extension, the AK-47) and adds modern polymer weight savings, Picatinny rails, and left-side charging handles. It is popular in South America and Vietnam.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 </div>
 </section>
 
+<footer class="bg-dark text-white text-center p-3">
+    <p class="mb-1">© 2026 Firearms of the World</p>
+    <small>This project is for educational purposes only.</small>
+</footer>
 
-<footer class="text-center p-3"><small>Educational purpose only</small></footer>
+<a href="enquiry.html" class="enquiry-float">?</a>
+
 </body>
 </html>

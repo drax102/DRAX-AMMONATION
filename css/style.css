@@ -1,507 +1,343 @@
 /* =========================================
-   1. SYSTEM BOOT & GLOBAL SETUP
+   1. GLOBAL SETTINGS & ANIMATIONS
    ========================================= */
 body {
     font-family: 'Poppins', sans-serif;
-    /* Custom Crosshair Cursor for the Shooter Vibe */
-    cursor: crosshair; 
+    cursor: crosshair;
     background:
         linear-gradient(
-            rgba(0,0,0,0.88),
-            rgba(120,0,0,0.75)
+            rgba(0,0,0,0.92),
+            rgba(50,0,0,0.6)
         ),
         url("../assets/images/bg2.jpg") no-repeat center fixed;
     background-size: cover;
-    color: #eaeaea;
+    color: #f0f0f0; /* Default text color is bright off-white */
     min-height: 100vh;
-    overflow-x: hidden; /* Prevents horizontal scrollbar */
-    
-    /* THE "SYSTEM BOOT" ANIMATION */
+    overflow-x: hidden;
     animation: systemBoot 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    opacity: 0; /* Starts hidden */
+    opacity: 0;
 }
 
-/* The cinematic fade-in + slide-up effect */
+/* Global Text Visibility Fixes */
+p, span, div, li, .card-text {
+    color: #e0e0e0; 
+}
+
+/* Override Bootstrap's muted text to be readable silver */
+.text-muted {
+    color: #b0b0b0 !important;
+}
+
+/* System Boot Animation */
 @keyframes systemBoot {
-    0% {
-        opacity: 0;
-        transform: translateY(20px) scale(0.98);
-        filter: blur(5px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
-    }
+    0% { opacity: 0; transform: translateY(20px) scale(0.98); filter: blur(5px); }
+    100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
 }
+
+/* Custom Scrollbar (Tactical Red) */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0a0a0a; border-left: 1px solid #330000; }
+::-webkit-scrollbar-thumb { background: #bd0000; border-radius: 2px; border: 1px solid #ff4d4d; }
+::-webkit-scrollbar-thumb:hover { background: #ff0000; }
+
+::selection { background: #ff4d4d; color: #fff; text-shadow: 0 0 5px rgba(0,0,0,1); }
+
+a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; }
 
 /* =========================================
-   2. PRO-LEVEL POLISH (SCROLLBAR & SELECTION)
-   ========================================= */
-/* Custom "Tactical" Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #0f0f0f; 
-    border-left: 1px solid #330000;
-}
-::-webkit-scrollbar-thumb {
-    background: darkred; 
-    border-radius: 2px;
-    border: 1px solid #ff2a2a;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #ff0000; 
-}
-
-/* High-Contrast Text Selection */
-::selection {
-    background: #ff2a2a;
-    color: #fff;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-}
-
-/* Make links feel interactive */
-a, button, .btn {
-    cursor: crosshair !important;
-}
-
-/* =========================================
-   3. NAVBAR
+   2. NAVBAR & NAVIGATION
    ========================================= */
 .navbar {
-    backdrop-filter: blur(10px); /* Increased blur for readability */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.8);
-    border-bottom: 1px solid rgba(255, 0, 0, 0.1);
+    position: relative;
+    z-index: 10000; 
+    background: rgba(0, 0, 0, 0.90);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.9);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.3);
 }
 
-.navbar-brand {
-    position: relative;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-/* Brand underline scan */
+.navbar-brand { position: relative; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #fff !important; }
 .navbar-brand::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background: red;
-    transition: width 0.3s ease;
+    content: ""; position: absolute; left: 0; bottom: -4px; width: 0%; height: 2px; background: #ff4d4d; transition: width 0.3s ease;
 }
 .navbar-brand:hover::after { width: 100%; }
 
 .navbar-nav .nav-link {
-    position: relative;
-    margin-left: 12px;
-    font-weight: 500;
+    position: relative; margin-left: 12px; font-weight: 600;
+    color: #d1d1d1 !important;
     transition: all 0.3s ease;
 }
-
-/* Nav Link Laser Underline */
 .navbar-nav .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0%;
-    height: 2px;
-    background: red;
-    box-shadow: 0 0 8px red; /* Glowing line */
-    transition: width 0.3s ease;
+    content: ""; position: absolute; left: 0; bottom: -6px; width: 0%; height: 2px; background: #ff4d4d; box-shadow: 0 0 8px red; transition: width 0.3s ease;
 }
+.navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.active::after { width: 100%; }
+.navbar-nav .nav-link:hover { color: #ff4d4d !important; text-shadow: 0 0 10px rgba(255,0,0,0.6); transform: translateY(-2px); }
 
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-    width: 100%;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #ff2a2a !important;
-    text-shadow: 0 0 10px rgba(255,0,0,0.8);
-    transform: translateY(-2px); /* Slight lift */
-}
-
-/* Active State Pulse */
-.navbar-nav .nav-link.active {
-    animation: activeGlow 2.5s infinite;
-}
-
-@keyframes activeGlow {
-    0% { text-shadow: 0 0 6px rgba(255,0,0,0.4); }
-    50% { text-shadow: 0 0 14px rgba(255,0,0,0.9); }
-    100% { text-shadow: 0 0 6px rgba(255,0,0,0.4); }
-}
-
-/* Logo Radar Scan Animation */
+/* Logo Styling */
 .navbar-logo {
-    position: relative;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    padding: 6px;
-    background: radial-gradient(circle, #2a0000, #000);
-    border: 1px solid darkred;
-    box-shadow: 0 0 8px rgba(255,0,0,0.6), inset 0 0 6px rgba(255,0,0,0.4);
-    transition: all 0.35s ease;
+    position: relative; width: 48px; height: 48px; border-radius: 50%; padding: 6px;
+    background: radial-gradient(circle, #400000, #000); border: 1px solid #ff0000;
+    box-shadow: 0 0 8px rgba(255,0,0,0.6); transition: all 0.35s ease;
 }
-.navbar-logo::after {
-    content: "";
-    position: absolute;
-    inset: -6px;
-    border-radius: 50%;
-    border: 2px solid rgba(255,0,0,0.6);
-    border-top-color: transparent; /* Makes it look like a spinning radar */
-    border-bottom-color: transparent;
-    animation: scan 3s linear infinite;
+.navbar-logo:hover { transform: scale(1.12) rotate(-3deg); box-shadow: 0 0 18px rgba(255,0,0,1); }
+
+/* Dropdown Menu */
+.logo-wrapper { position: relative; display: inline-block; }
+.logo-dropdown {
+    position: absolute; top: 140%; left: 0; width: 280px;
+    background: rgba(10, 10, 10, 0.98);
+    border: 1px solid #800000; border-radius: 6px; padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,1);
+    opacity: 0; visibility: hidden; transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 10001;
 }
-.navbar-logo:hover {
-    transform: scale(1.12) rotate(-3deg);
-    box-shadow: 0 0 18px rgba(255,0,0,0.9);
+.logo-wrapper:hover .logo-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.logo-dropdown h6 { color: #ff4d4d !important; margin-bottom: 8px; font-weight: 700; text-transform: uppercase; }
+.logo-dropdown p { font-size: 0.85rem; color: #bbb !important; margin-bottom: 15px; }
+.logo-dropdown ul { list-style: none; padding: 0; margin: 0; }
+.logo-dropdown ul li { margin-bottom: 8px; }
+.logo-dropdown ul li a {
+    color: #e0e0e0; font-size: 0.9rem; text-decoration: none; transition: 0.2s; display: block; padding: 5px 10px; border-radius: 4px;
 }
-@keyframes scan {
-    0% { transform: rotate(0deg) scale(1); opacity: 0.5; }
-    50% { opacity: 1; }
-    100% { transform: rotate(360deg) scale(1); opacity: 0.5; }
+.logo-dropdown ul li a:hover { background: rgba(255, 77, 77, 0.2); color: #ff4d4d; padding-left: 15px; }
+.logo-dropdown::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(90deg, transparent, #ff4d4d, transparent); animation: scanLine 2s infinite;
 }
-.navbar img { margin-right: 10px; }
 
 /* =========================================
-   4. HERO SECTION (INTERACTIVE GLITCH)
+   3. HERO SECTION
    ========================================= */
 .hero-section {
-    background: linear-gradient(to right, rgba(0,0,0,0.95), rgba(60,0,0,0.6), rgba(0,0,0,0.95));
-    border-top: 2px solid darkred;
-    border-bottom: 2px solid darkred;
-    position: relative;
-    overflow: hidden;
+    background: linear-gradient(to right, rgba(0,0,0,0.95), rgba(40,0,0,0.8), rgba(0,0,0,0.95));
+    border-top: 2px solid #800000; border-bottom: 2px solid #800000; position: relative; overflow: hidden;
+    z-index: 1;
 }
-
-/* Tactical Grid Background */
-.hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-image: 
-        linear-gradient(rgba(255, 0, 0, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 0, 0, 0.05) 1px, transparent 1px);
-    background-size: 30px 30px;
-    pointer-events: none;
-}
-
 .hero-section h1 {
-    font-size: 3.5rem; /* Larger title */
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #ff2a2a;
-    text-shadow: 0 0 10px rgba(255,0,0,0.7), 0 0 30px rgba(255,0,0,0.4);
-    transition: all 0.2s;
+    font-size: 3.5rem; letter-spacing: 3px; text-transform: uppercase;
+    color: #ff4d4d;
+    text-shadow: 2px 2px 0px #000, 0 0 25px rgba(255,0,0,0.4);
+    font-weight: 800;
+    transition: all 0.3s ease;
     cursor: default;
 }
-
-/* Glitch Effect on Hover */
 .hero-section h1:hover {
-    animation: textGlitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
-    color: #fff; /* Flashes white */
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 77, 77, 0.9);
+    transform: scale(1.02);
 }
-@keyframes textGlitch {
-    0% { transform: translate(0); }
-    20% { transform: translate(-3px, 3px); }
-    40% { transform: translate(-3px, -3px); }
-    60% { transform: translate(3px, 3px); }
-    80% { transform: translate(3px, -3px); }
-    100% { transform: translate(0); }
-}
-
-.hero-section h1::after {
-    content: "";
-    display: block;
-    width: 120px;
-    height: 4px;
-    background: darkred;
-    margin: 20px auto 0;
-    box-shadow: 0 0 10px red;
-}
-
 .hero-section p {
-    max-width: 700px;
-    margin: 20px auto 0;
-    font-size: 1.1rem;
-    color: #ccc;
-    position: relative;
-    z-index: 2;
-    line-height: 1.6;
+    max-width: 700px; margin: 20px auto 0; font-size: 1.2rem;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 2px black;
+    position: relative; z-index: 2; line-height: 1.6;
 }
 
 /* =========================================
-   5. ADVANCED CARDS (SPOTLIGHT & FIXES)
+   4. INTERACTIVE CARD SYSTEM
    ========================================= */
-/* Ensure the grid doesn't clip our pop-up */
-.row, section {
-   overflow: visible !important; 
-   position: relative;
-   z-index: 1;
-}
+.row, section, .container { overflow: visible !important; position: relative; z-index: 1; }
 
 .card {
     position: relative;
     height: 100%;
-    /* Default State: Dark & transparent */
-    background: rgba(20, 20, 20, 0.9);
-    border: 1px solid rgba(139, 0, 0, 0.4);
-    color: #eaeaea;
-    overflow: hidden; 
+    background: rgba(15, 15, 15, 0.95);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    color: #e0e0e0;
+    overflow: hidden;
     backdrop-filter: blur(5px);
-    /* Smooth transition for the pop-up */
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    outline: none;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     z-index: 1;
     display: flex;
     flex-direction: column;
 }
 
-/* --- THE CARD IMAGE (FIXING THE WHITE BOX) --- */
+/* Hover Preview State */
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #ff4d4d;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    background: rgba(25, 25, 25, 1);
+}
+
+/* Clicked / Focus State (Modal View) */
+.card:focus {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 85vw; max-width: 650px;
+    height: auto; max-height: 90vh;
+    overflow-y: auto;
+    z-index: 99999; /* Highest z-index */
+    background: #080808;
+    border: 2px solid #ff4d4d;
+    box-shadow:
+        0 0 0 100vmax rgba(0, 0, 0, 0.96), /* Background Dimmer */
+        0 0 60px rgba(255, 0, 0, 0.2);
+}
+
+/* Card Image - Perfect Fit */
 .card-img-top {
-    height: 180px;
-    width: 100%;
-    object-fit: contain;
-    padding: 10px;
-    background: #fff; /* We keep the white bg intentionally */
-    /* Create a cool "scanner screen" look around the image */
+    height: 220px; 
+    width: 100%; 
+    object-fit: contain; /* Ensures full weapon is seen */
+    padding: 20px;
+    background-color: #050505; /* Seamless black background */
     clip-path: polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%);
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid #cc0000;
     transition: all 0.4s ease;
 }
+.card:focus .card-img-top { height: 280px; background-color: #000; }
 
-/* --- HOVER STATE (THE POP-UP) --- */
-.card:hover {
-    /* 1. Lift and Scale */
-    transform: translateY(-10px) scale(1.1);
-    z-index: 9999; /* Bring to very front */
-    
-    /* 2. Style the Active Card */
-    background: #000; /* Solid black background for readability */
-    border: 1px solid #ff2a2a;
-    
-    /* 3. THE "DIM THE BACKGROUND" TRICK */
-    /* This creates a huge shadow that darkens the rest of the page */
-    box-shadow: 
-        0 0 0 100vmax rgba(0, 0, 0, 0.85), /* The Dimmer */
-        0 0 50px rgba(255, 42, 42, 0.5);   /* The Red Glow */
-}
-
-/* Image Animation on Hover */
-.card:hover .card-img-top {
-    height: 220px; /* Grow image slightly */
-    filter: contrast(1.1);
-}
-
-/* --- CARD TEXT --- */
-.card-body {
-    padding: 15px;
-    position: relative;
-    z-index: 2;
-}
+/* Card Text & Body */
+.card-body { padding: 20px; position: relative; z-index: 2; }
 
 .card-title {
-    color: #ff2a2a;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+    color: #ff4d4d !important; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+    text-shadow: 1px 1px 1px #000;
+}
+.card:focus .card-title { color: #fff !important; text-shadow: 0 0 15px #ff0000; font-size: 2.2rem; }
+
+.badge {
+    font-size: 0.85em; letter-spacing: 0.5px; padding: 6px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    color: #fff; 
 }
 
-.card:hover .card-title {
-    color: #fff;
-    text-shadow: 0 0 10px red;
-}
-
-/* The Extra Info (Hidden by default) */
+/* Expanded Info Section (Hidden by default) */
 .gun-extra {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    border-top: 1px solid rgba(255, 0, 0, 0.2);
+    max-height: 0; opacity: 0; overflow: hidden;
+    transition: all 0.3s ease;
+    border-top: 1px solid #333;
     margin-top: 0;
-    font-size: 0.85rem;
-    color: #ccc;
-    background: rgba(30,0,0,0.5); /* Dark red backing for text */
 }
-
-/* Reveal Extra Info on Hover */
-.card:hover .gun-extra {
-    max-height: 300px; /* Allow enough space */
+.card:focus .gun-extra {
+    max-height: 600px;
     opacity: 1;
-    margin-top: 15px;
-    padding: 10px;
-    border-top: 1px solid red;
+    margin-top: 15px; padding: 20px;
+    background: #111111;
+    border: 1px solid #333;
+    border-radius: 6px;
 }
+.gun-extra h6 { color: #ff4d4d !important; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px; }
+.gun-extra p { color: #e0e0e0 !important; font-size: 0.95rem; line-height: 1.7; }
+.gun-extra li { color: #dcdcdc; margin-bottom: 8px; border-bottom: 1px solid #222; padding-bottom: 4px; }
+.gun-extra strong { color: #fff; }
 
-/* --- DECORATIVE "SCANNER" LINE --- */
+/* Progress Bars */
+.progress { background-color: #2a2a2a; border-radius: 2px; }
+.progress-bar { box-shadow: 0 0 5px rgba(255,0,0,0.5); }
+
+/* Scanner Effect Animation */
 .card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transform: skewX(-25deg);
-    transition: 0.5s;
-    pointer-events: none;
+    content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transform: skewX(-25deg); transition: 0.5s; pointer-events: none;
 }
+.card:focus::before { animation: scanOnce 1s ease forwards; }
 
-.card:hover::before {
-    left: 150%;
-    transition: 0.7s;
+@keyframes scanOnce { 0% { left: -100%; } 100% { left: 200%; } }
+
+/* Close Instruction Text */
+.card:focus::after {
+    content: "[ CLICK OUTSIDE TO CLOSE ]";
+    position: absolute; bottom: 10px; right: 15px;
+    color: #ff4d4d; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px;
+    animation: blink 2s infinite; pointer-events: none;
 }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
 /* =========================================
-   6. INTERACTIVE BUTTONS
+   5. ENQUIRY FORM STYLES
+   ========================================= */
+.tactical-form {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #800000;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 4px;
+    position: relative;
+}
+.tactical-form::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+    background: linear-gradient(90deg, #800000, #ff4d4d, #800000);
+}
+.form-control, .form-select {
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    color: #f0f0f0;
+}
+.form-control:focus, .form-select:focus {
+    background-color: #000;
+    color: #fff;
+    border-color: #ff4d4d;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
+}
+.form-label { color: #ff4d4d; font-weight: 600; text-transform: uppercase; }
+
+/* =========================================
+   6. BUTTONS & FOOTER
    ========================================= */
 .btn-dark {
-    background: linear-gradient(45deg, darkred, #500000);
-    border: 1px solid transparent;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    z-index: 5;
-    overflow: hidden;
+    background: linear-gradient(45deg, #800000, #400000);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px;
     transition: all 0.3s ease;
 }
-
 .btn-dark:hover {
-    background: #ff2a2a;
-    box-shadow: 0 0 20px red;
+    background: #ff4d4d;
+    box-shadow: 0 0 20px rgba(255,0,0,0.6);
     border-color: #fff;
-    transform: translateY(-2px);
-}
-
-/* Button Click/Recoil Animation */
-.btn-dark:active {
-    transform: scale(0.95);
-}
-
-/* =========================================
-   7. FOOTER
-   ========================================= */
-footer {
-    background: rgba(5, 5, 5, 0.98);
-    border-top: 2px solid darkred;
-    padding: 20px 0;
-}
-
-/* =========================================
-   8. RADAR FLOAT BUTTON (THE "CONTACT ME")
-   ========================================= */
-.enquiry-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: darkred;
     color: #fff;
-    font-size: 24px;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    text-decoration: none;
-    box-shadow: 0 0 15px red;
-    z-index: 1000;
-    transition: all 0.3s ease;
 }
 
-/* Signal Ripple Effect */
-.enquiry-float::before {
-    content: "";
-    position: absolute;
-    width: 100%; height: 100%;
-    border-radius: 50%;
-    border: 2px solid red;
-    animation: signalRipple 2s infinite;
-    z-index: -1;
-}
-.enquiry-float::after {
-    content: "";
-    position: absolute;
-    width: 100%; height: 100%;
-    border-radius: 50%;
-    border: 2px solid red;
-    animation: signalRipple 2s infinite 0.6s; /* Delayed ripple */
-    z-index: -1;
+footer {
+    background: #050505;
+    border-top: 3px solid #800000;
+    padding: 30px 0;
+    color: #888;
 }
 
-@keyframes signalRipple {
-    0% { transform: scale(1); opacity: 0.8; }
-    100% { transform: scale(2.5); opacity: 0; }
+/* Floating Action Button */
+.enquiry-float {
+    position: fixed; bottom: 30px; right: 30px; background: #800000; color: #fff;
+    font-size: 24px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; text-decoration: none; box-shadow: 0 0 15px #ff0000; z-index: 1000; transition: all 0.3s ease;
 }
-
-.enquiry-float:hover {
-    transform: scale(1.1) rotate(90deg);
-    background: #ff2a2a;
-    box-shadow: 0 0 30px #ff2a2a;
-    color: white;
-}
+.enquiry-float:hover { transform: scale(1.1) rotate(90deg); background: #ff4d4d; box-shadow: 0 0 30px #ff4d4d; color: white; }
 
 /* =========================================
-   9. DROPDOWN MENU
+   7. MOBILE OPTIMIZATIONS
    ========================================= */
-.logo-wrapper {
-    position: relative;
-    display: inline-block;
-}
-.logo-dropdown {
-    position: absolute;
-    top: 140%; /* Slightly lower */
-    left: 0;
-    width: 280px;
-    background: rgba(10, 10, 10, 0.98);
-    border: 1px solid darkred;
-    border-radius: 6px;
-    padding: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncy reveal */
-    z-index: 999;
-}
-.logo-wrapper:hover .logo-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-.logo-dropdown h6 { color: #ff2a2a; margin-bottom: 8px; font-weight: 700; text-transform: uppercase; }
-.logo-dropdown p { font-size: 0.85rem; color: #aaa; margin-bottom: 15px; }
-.logo-dropdown ul { list-style: none; padding: 0; margin: 0; }
-.logo-dropdown ul li { margin-bottom: 8px; }
-.logo-dropdown ul li a {
-    color: #eaeaea; font-size: 0.9rem; text-decoration: none; transition: 0.2s;
-    display: block;
-    padding: 5px 10px;
-    border-radius: 4px;
-}
-.logo-dropdown ul li a:hover {
-    background: rgba(255, 42, 42, 0.2);
-    color: #ff2a2a;
-    padding-left: 15px; /* Slide effect */
-}
-/* Top scan line for dropdown */
-.logo-dropdown::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 3px;
-    background: linear-gradient(90deg, transparent, red, transparent);
-    animation: scanLine 2s infinite;
-}
-@keyframes scanLine {
-    0% { background-position: -200px 0; }
-    100% { background-position: 200px 0; }
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-section h1 { font-size: 2.2rem !important; letter-spacing: 1px; }
+    .hero-section p { font-size: 1rem; padding: 0 15px; }
+
+    /* Pop-up Card Logic */
+    .card:focus {
+        width: 95vw;
+        max-height: 85vh;
+        border-width: 1px;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card:focus .card-title { font-size: 1.8rem; }
+    .card:focus .card-img-top { height: 200px; padding: 10px; }
+
+    /* Close Instruction visibility */
+    .card:focus::after {
+        font-size: 0.6rem;
+        bottom: 5px; right: 10px;
+        background: rgba(0,0,0,0.5); /* Background to ensure readability over content */
+        padding: 2px 5px;
+        border-radius: 4px;
+    }
+    
+    .enquiry-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 20px; }
 }

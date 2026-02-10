@@ -23,7 +23,6 @@ h1, h2, h3, h4, h5, h6, p, span, div, li, a, input, textarea, select, label, .fo
     color: #e0e0e0 !important;
 }
 
-/* Exceptions for placeholders and muted text */
 ::placeholder { color: #a0a0a0 !important; opacity: 1; }
 .text-muted { color: #b0b0b0 !important; }
 
@@ -133,39 +132,56 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 }
 
 /* =========================================
-   4. STABLE "IN-PLACE" CARD SYSTEM
+   4. INTERACTIVE CARD SYSTEM
    ========================================= */
 .row, section, .container { overflow: visible !important; position: relative; z-index: 1; }
 
 .card {
     position: relative;
-    height: 100%; /* Important: Takes up space normally */
+    height: 100%; 
     background: rgba(15, 15, 15, 0.95);
     border: 1px solid rgba(255, 0, 0, 0.2);
     color: #e0e0e0;
     overflow: hidden;
     backdrop-filter: blur(5px);
     outline: none;
-    transition: transform 0.3s ease, border-color 0.3s ease; /* Removed height transitions to avoid grid jumping */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 1;
     display: flex;
     flex-direction: column;
+    cursor: pointer !important;
 }
 
-/* Hover Effect (Desktop Only) */
+/* SUPERCHARGED HOVER EFFECTS */
 .card:hover {
-    transform: translateY(-5px);
-    border-color: #ff4d4d;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
-    background: rgba(25, 25, 25, 1);
+    transform: translateY(-10px) scale(1.02);
+    border-color: #ff0000;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.95), rgba(40, 0, 0, 0.9));
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.9),
+        0 0 15px rgba(255, 0, 0, 0.4),
+        inset 0 0 10px rgba(255, 0, 0, 0.1);
+    z-index: 10;
 }
 
-/* ACTIVE STATE (When clicked/focused) */
+.card:hover .card-img-top {
+    transform: scale(1.1);
+    border-bottom-color: #ff0000;
+}
+
+.card:hover .card-title {
+    color: #fff !important;
+    text-shadow: 0 0 15px #ff0000;
+    transform: translateX(5px);
+}
+
+/* ACTIVE STATE (Using :focus for No-JS click) */
 .card:focus {
-    /* No Fixed Position! Just a highlight style */
     border-color: #ff4d4d;
     background: #000;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    transform: scale(1.0); /* Reset scale so it doesn't cover neighbors */
+    z-index: 5;
     outline: none;
 }
 
@@ -177,8 +193,9 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
     padding: 20px;
     background-color: #050505; 
     border-bottom: 3px solid #cc0000;
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
 }
+.card:focus .card-img-top { height: 280px; background-color: #000; }
 
 /* Card Text */
 .card-body { padding: 20px; position: relative; z-index: 2; }
@@ -186,6 +203,7 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 .card-title {
     color: #ff4d4d !important; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
     text-shadow: 1px 1px 1px #000;
+    transition: all 0.3s ease;
 }
 
 .badge {
@@ -196,19 +214,19 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 
 .card-text { color: #cccccc !important; font-size: 1rem; line-height: 1.5; margin-bottom: 15px; }
 
-/* EXPANDED INFO SECTION (The magic part) */
+/* EXPANDED INFO SECTION (Hidden by default) */
 .gun-extra {
     max-height: 0; 
     opacity: 0; 
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease; /* Smooth expansion */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease;
     border-top: 1px solid #333;
     margin-top: 0;
 }
 
-/* When focused, just expand the height! */
+/* When FOCUSED (Clicked), Expand! */
 .card:focus .gun-extra {
-    max-height: 800px; /* Allow enough height for content */
+    max-height: 1200px; /* Large enough for content */
     opacity: 1;
     margin-top: 15px; 
     padding: 20px;
@@ -226,13 +244,35 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 .progress { background-color: #2a2a2a; border-radius: 2px; }
 .progress-bar { box-shadow: 0 0 5px rgba(255,0,0,0.5); }
 
-/* Close Instruction (Modified to be less obtrusive) */
-.card:focus::after {
-    content: "[ SELECTED ]"; /* Changed text since we aren't closing a modal anymore */
+/* Holographic Scan Animation */
+.card::before {
+    content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transform: skewX(-25deg); transition: 0.5s; pointer-events: none;
+}
+
+.card:hover::before, .card:focus::before { 
+    animation: scanOnce 0.7s ease forwards;
+    background: linear-gradient(to right, transparent, rgba(255, 0, 0, 0.2), transparent);
+}
+
+@keyframes scanOnce { 0% { left: -100%; } 100% { left: 200%; } }
+
+/* Open/Close Instructions */
+.card::after {
+    content: "[ CLICK TO EXPAND ]";
     position: absolute; bottom: 10px; right: 15px;
-    color: #ff4d4d !important; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
+    color: #666 !important; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
     pointer-events: none;
-    opacity: 0.5;
+    transition: all 0.3s;
+    opacity: 0; /* Hidden by default to keep it clean */
+}
+.card:hover::after { opacity: 1; }
+
+.card:focus::after {
+    content: "[ CLICK OUTSIDE TO CLOSE ]";
+    color: #ff4d4d !important; 
+    opacity: 1;
 }
 
 /* =========================================
@@ -288,7 +328,6 @@ footer {
     color: #888;
 }
 
-/* Floating Action Button */
 .enquiry-float {
     position: fixed; bottom: 30px; right: 30px; background: #800000; color: #fff !important;
     font-size: 24px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
@@ -297,28 +336,28 @@ footer {
 .enquiry-float:hover { transform: scale(1.1) rotate(90deg); background: #ff4d4d; box-shadow: 0 0 30px #ff4d4d; color: white; }
 
 /* =========================================
-   7. MOBILE OPTIMIZATIONS (Simplified)
+   7. MOBILE OPTIMIZATIONS
    ========================================= */
 @media (max-width: 768px) {
-    /* Navbar Visibility */
     .navbar-collapse {
         background: rgba(0, 0, 0, 0.98);
         padding: 20px;
         border-bottom: 2px solid #800000;
     }
 
-    /* Hero Text */
     .hero-section h1 { font-size: 2.2rem !important; letter-spacing: 1px; }
     .hero-section p { font-size: 1rem; padding: 0 15px; }
 
-    /* Card Mobile Tweaks (Just make sure image is small enough) */
+    /* Mobile: Keep image small, ensure padding */
     .card-img-top { height: 180px; padding: 10px; }
     
-    /* Ensure the expanded area is visible */
+    /* On mobile, remove 3D scaling for stability */
+    .card:hover { transform: none; box-shadow: none; }
+    
+    /* Ensure expanded area is visible */
     .card:focus .gun-extra {
         padding: 15px;
     }
     
-    /* Floating button position */
     .enquiry-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 20px; }
 }

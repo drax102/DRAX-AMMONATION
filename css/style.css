@@ -103,6 +103,7 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
     background: linear-gradient(90deg, transparent, #ff4d4d, transparent); animation: scanLine 2s infinite;
 }
 
+<<<<<<< HEAD
 
 /* --- SLOGAN ANIMATION (The cool slide-out effect) --- */
 .slogan {
@@ -165,6 +166,41 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
    ========================================= */
 .row, section, .container { overflow: visible !important; position: relative; z-index: 1; }
 
+=======
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
+.hero-section {
+    background: linear-gradient(to right, rgba(0,0,0,0.95), rgba(40,0,0,0.8), rgba(0,0,0,0.95));
+    border-top: 2px solid #800000; border-bottom: 2px solid #800000; position: relative; overflow: hidden;
+    z-index: 1;
+}
+.hero-section h1 {
+    font-size: 3.5rem; letter-spacing: 3px; text-transform: uppercase;
+    color: #ff4d4d !important;
+    text-shadow: 2px 2px 0px #000, 0 0 25px rgba(255,0,0,0.4);
+    font-weight: 800;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+.hero-section h1:hover {
+    color: #fff !important;
+    text-shadow: 0 0 20px rgba(255, 77, 77, 0.9);
+    transform: scale(1.02);
+}
+.hero-section p {
+    max-width: 700px; margin: 20px auto 0; font-size: 1.2rem;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 2px black;
+    position: relative; z-index: 2; line-height: 1.6;
+}
+
+/* =========================================
+   4. INTERACTIVE CARD SYSTEM
+   ========================================= */
+.row, section, .container { overflow: visible !important; position: relative; z-index: 1; }
+
+>>>>>>> 11f3fcd2b0899b728dee2455cdee5227d19e8d4a
 .card {
     position: relative;
     height: 100%; 
@@ -209,7 +245,11 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
     border-color: #ff4d4d;
     background: #000;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+<<<<<<< HEAD
     transform: scale(1.0); 
+=======
+    transform: scale(1.0); /* Reset scale so it doesn't cover neighbors */
+>>>>>>> 11f3fcd2b0899b728dee2455cdee5227d19e8d4a
     z-index: 5;
     outline: none;
 }
@@ -255,7 +295,11 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 
 /* When FOCUSED (Clicked), Expand! */
 .card:focus .gun-extra {
+<<<<<<< HEAD
     max-height: 1200px; 
+=======
+    max-height: 1200px; /* Large enough for content */
+>>>>>>> 11f3fcd2b0899b728dee2455cdee5227d19e8d4a
     opacity: 1;
     margin-top: 15px; 
     padding: 20px;
@@ -294,7 +338,11 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
     color: #666 !important; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
     pointer-events: none;
     transition: all 0.3s;
+<<<<<<< HEAD
     opacity: 0; 
+=======
+    opacity: 0; /* Hidden by default to keep it clean */
+>>>>>>> 11f3fcd2b0899b728dee2455cdee5227d19e8d4a
 }
 .card:hover::after { opacity: 1; }
 
@@ -377,6 +425,7 @@ footer {
     .hero-section h1 { font-size: 2.2rem !important; letter-spacing: 1px; }
     .hero-section p { font-size: 1rem; padding: 0 15px; }
 
+<<<<<<< HEAD
    
     .card-img-top { height: 180px; padding: 10px; }
     
@@ -384,9 +433,22 @@ footer {
     .card:hover { transform: none; box-shadow: none; }
     
 
+=======
+    /* Mobile: Keep image small, ensure padding */
+    .card-img-top { height: 180px; padding: 10px; }
+    
+    /* On mobile, remove 3D scaling for stability */
+    .card:hover { transform: none; box-shadow: none; }
+    
+    /* Ensure expanded area is visible */
+>>>>>>> 11f3fcd2b0899b728dee2455cdee5227d19e8d4a
     .card:focus .gun-extra {
         padding: 15px;
     }
     
     .enquiry-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 20px; }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 11f3fcd2b0899b728dee2455cdee5227d19e8d4a

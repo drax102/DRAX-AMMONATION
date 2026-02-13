@@ -106,26 +106,26 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 
 /* --- SLOGAN ANIMATION (The cool slide-out effect) --- */
 .slogan {
-    font-size: 0.6em;       /* Smaller than the main logo */
-    font-weight: 400;       /* Thinner font */
-    color: #ff4d4d;         /* Red text */
-    opacity: 0;             /* Hidden by default */
-    max-width: 0;           /* width 0 to hide it completely */
+    font-size: 0.6em;       
+    font-weight: 400;       
+    color: #ff4d4d;        
+    opacity: 0;             
+    max-width: 0;           
     display: inline-block;
-    white-space: nowrap;    /* Prevents text wrapping */
-    overflow: hidden;       /* Hides text while sliding */
+    white-space: nowrap;    
+    overflow: hidden;       
     vertical-align: middle; 
-    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); /* Smooth "Eased" slide */
-    text-shadow: none;      /* Remove shadow for cleaner look */
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); 
+    text-shadow: none;  
     letter-spacing: 2px;
 }
 
 /* On Hover: Slide it out! */
 .navbar-brand:hover .slogan {
     opacity: 1;
-    max-width: 300px;       /* Allow enough width for the text */
-    margin-left: 15px;      /* Add space between "Firearms" and slogan */
-    text-shadow: 0 0 10px rgba(255, 77, 77, 0.5); /* Glowing text effect */
+    max-width: 300px;       
+    margin-left: 15px;      
+    text-shadow: 0 0 10px rgba(255, 77, 77, 0.5); 
 }
 
 /* Hide on Mobile so it doesn't break layout */
@@ -209,7 +209,7 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
     border-color: #ff4d4d;
     background: #000;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-    transform: scale(1.0); /* Reset scale so it doesn't cover neighbors */
+    transform: scale(1.0); 
     z-index: 5;
     outline: none;
 }
@@ -255,7 +255,7 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
 
 /* When FOCUSED (Clicked), Expand! */
 .card:focus .gun-extra {
-    max-height: 1200px; /* Large enough for content */
+    max-height: 1200px; 
     opacity: 1;
     margin-top: 15px; 
     padding: 20px;
@@ -294,7 +294,7 @@ a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; 
     color: #666 !important; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
     pointer-events: none;
     transition: all 0.3s;
-    opacity: 0; /* Hidden by default to keep it clean */
+    opacity: 0; 
 }
 .card:hover::after { opacity: 1; }
 
@@ -377,13 +377,12 @@ footer {
     .hero-section h1 { font-size: 2.2rem !important; letter-spacing: 1px; }
     .hero-section p { font-size: 1rem; padding: 0 15px; }
 
-    /* Mobile: Keep image small, ensure padding */
+    
     .card-img-top { height: 180px; padding: 10px; }
     
-    /* On mobile, remove 3D scaling for stability */
-    .card:hover { transform: none; box-shadow: none; }
+        .card:hover { transform: none; box-shadow: none; }
     
-    /* Ensure expanded area is visible */
+   
     .card:focus .gun-extra {
         padding: 15px;
     }

@@ -3,23 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pistols</title>
+<title>Pistols | Tactical Database</title>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark">
 <div class="logo-wrapper">
     <img src="assets/images/logogun.png" alt="Logo" class="navbar-logo">
-
     <div class="logo-dropdown">
         <h6>Firearms of the World</h6>
         <p>Explore firearms by type & origin</p>
-
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="shotgun.html">Shotguns</a></li>
@@ -34,307 +33,521 @@
 </div>
     <div class="container">
         <a class="navbar-brand" href="index.html">Firearms</a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="shotgun.html">Shotguns</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="rifle.html">Rifles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="pistol.html">Pistols</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="smg.html">SMGs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sniper.html">Snipers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="machinegun.html">Machine Guns</a>
-                </li>
-                                <li class="nav-item">
-                    <a class="nav-link" href="enquiry.html">Enquiry</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="shotgun.html">Shotguns</a></li>
+                <li class="nav-item"><a class="nav-link" href="rifle.html">Rifles</a></li>
+                <li class="nav-item"><a class="nav-link active" href="pistol.html">Pistols</a></li>
+                <li class="nav-item"><a class="nav-link" href="smg.html">SMGs</a></li>
+                <li class="nav-item"><a class="nav-link" href="sniper.html">Snipers</a></li>
+                <li class="nav-item"><a class="nav-link" href="machinegun.html">Machine Guns</a></li>
+                <li class="nav-item"><a class="nav-link" href="enquiry.html">Enquiry</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-
-<section class="text-white text-center p-5">
+<section class="hero-section text-center p-5">
     <h1>Pistols</h1>
-    <p>Handguns for self-defense, law enforcement, and military use</p>
+    <p>Handguns designed for self-defense, law enforcement, and military sidearm use.</p>
 </section>
 
 <section class="container my-5">
 <div class="row g-4">
 
-<!-- 1 Glock 17 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/glock17.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Glock 17</h5>
-<span class="badge bg-primary mb-2">Austria</span>
-<span class="badge bg-success mb-2">Semi-Automatic</span>
-<p class="card-text">Reliable service pistol used worldwide.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/glock17.jpg" class="card-img-top" alt="Glock 17">
+        <div class="card-body">
+            <h5 class="card-title">Glock 17</h5>
+            <div class="mb-2">
+                <span class="badge bg-primary">AUSTRIA</span>
+                <span class="badge bg-success">SEMI-AUTO</span>
+                <span class="badge bg-secondary">9x19mm</span>
+            </div>
+            <p class="card-text">The world's most popular polymer-framed service pistol.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Reliability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                        <label class="text-muted small">Capacity</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                        <label class="text-muted small">Concealability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 50m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 625g</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 204mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Action:</strong> Safe Action</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">Introduced in 1982, the Glock 17 revolutionized the handgun market with its "Safe Action" system and high-capacity polymer frame. It is the standard sidearm for law enforcement agencies worldwide, including the FBI and British Armed Forces.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 9×19mm</li>
-<li class="list-group-item"><strong>Magazine:</strong> 17 rounds</li>
-<li class="list-group-item"><strong>Usage:</strong> Police & Military</li>
-</ul>
-
-<div class="gun-extra">
-<p>Polymer Frame</p>
-<p>Striker Fired</p>
-<p>Low Maintenance</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 2 Beretta M9 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/beretta-m9.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Beretta M9</h5>
-<span class="badge bg-warning mb-2">Italy</span>
-<span class="badge bg-success mb-2">Semi-Automatic</span>
-<p class="card-text">Standard US military sidearm for decades.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/beretta-m9.jpg" class="card-img-top" alt="Beretta M9">
+        <div class="card-body">
+            <h5 class="card-title">Beretta M9</h5>
+            <div class="mb-2">
+                <span class="badge bg-warning text-dark">ITALY</span>
+                <span class="badge bg-success">SEMI-AUTO</span>
+                <span class="badge bg-secondary">9x19mm</span>
+            </div>
+            <p class="card-text">The standard US military sidearm for over 30 years.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Accuracy</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 80%"></div>
+                        </div>
+                        <label class="text-muted small">Durability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Handling</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 50m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 952g</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 217mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Action:</strong> DA/SA</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The M9 replaced the M1911 in 1985 as the primary pistol of the US Armed Forces. Known for its open-slide design which reduces stove-pipe jams, it has seen action in every major US conflict since the Gulf War.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 9×19mm</li>
-<li class="list-group-item"><strong>Magazine:</strong> 15 rounds</li>
-<li class="list-group-item"><strong>Usage:</strong> Military</li>
-</ul>
-
-<div class="gun-extra">
-<p>Metal Frame</p>
-<p>Double / Single Action</p>
-<p>High Reliability</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 3 SIG P226 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/sig-p226.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">SIG Sauer P226</h5>
-<span class="badge bg-warning mb-2">Germany</span>
-<span class="badge bg-success mb-2">Semi-Automatic</span>
-<p class="card-text">Precision pistol used by elite units.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/sig-p226.jpg" class="card-img-top" alt="SIG P226">
+        <div class="card-body">
+            <h5 class="card-title">SIG Sauer P226</h5>
+            <div class="mb-2">
+                <span class="badge bg-dark">GERMANY</span>
+                <span class="badge bg-success">SEMI-AUTO</span>
+                <span class="badge bg-secondary">9x19mm</span>
+            </div>
+            <p class="card-text">A precision instrument favored by Navy SEALs and elite units.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Precision</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Reliability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Weight Balance</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 50m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 964g</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 196mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Frame:</strong> Aluminum Alloy</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The P226 was the runner-up in the US trials against the Beretta M9 but was adopted by the Navy SEALs (Mk25) for its superior corrosion resistance and accuracy. It features a decocker instead of a safety.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 9×19mm</li>
-<li class="list-group-item"><strong>Magazine:</strong> 15 rounds</li>
-<li class="list-group-item"><strong>Usage:</strong> Special Forces</li>
-</ul>
-
-<div class="gun-extra">
-<p>High Accuracy</p>
-<p>Aluminum Frame</p>
-<p>Combat Proven</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 4 Colt M1911 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/m1911.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Colt M1911</h5>
-<span class="badge bg-primary mb-2">USA</span>
-<span class="badge bg-success mb-2">Semi-Automatic</span>
-<p class="card-text">Classic .45 caliber combat pistol.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/m1911.jpg" class="card-img-top" alt="M1911">
+        <div class="card-body">
+            <h5 class="card-title">Colt M1911</h5>
+            <div class="mb-2">
+                <span class="badge bg-primary">USA</span>
+                <span class="badge bg-success">SEMI-AUTO</span>
+                <span class="badge bg-secondary">.45 ACP</span>
+            </div>
+            <p class="card-text">The legendary .45 caliber pistol that served in two World Wars.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Stopping Power</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Capacity</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 40%"></div>
+                        </div>
+                        <label class="text-muted small">Trigger Feel</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 50m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 1100g</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 210mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Action:</strong> Single Action</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">Designed by John Browning, the M1911 is famous for its crisp single-action trigger and the stopping power of the .45 ACP round. It remains a favorite among custom gunsmiths and special operations units (MEU(SOC)).</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> .45 ACP</li>
-<li class="list-group-item"><strong>Magazine:</strong> 7 rounds</li>
-<li class="list-group-item"><strong>Usage:</strong> Military & Civilian</li>
-</ul>
-
-<div class="gun-extra">
-<p>Single Action</p>
-<p>Steel Frame</p>
-<p>Historic Design</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 5 CZ 75 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/cx75.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">CZ 75</h5>
-<span class="badge bg-secondary mb-2">Czech Republic</span>
-<span class="badge bg-success mb-2">Semi-Automatic</span>
-<p class="card-text">Famous for ergonomics and accuracy.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/cx75.jpg" class="card-img-top" alt="CZ 75">
+        <div class="card-body">
+            <h5 class="card-title">CZ 75</h5>
+            <div class="mb-2">
+                <span class="badge bg-secondary">CZECH</span>
+                <span class="badge bg-success">SEMI-AUTO</span>
+                <span class="badge bg-secondary">9x19mm</span>
+            </div>
+            <p class="card-text">Renowned for its low bore axis and exceptional ergonomics.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Ergonomics</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                        <label class="text-muted small">Recoil Control</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Value</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 50m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 1120g</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 206mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Feature:</strong> Internal Rails</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The CZ 75 features internal slide rails (the slide rides inside the frame), which lowers the bore axis and reduces muzzle flip. It is one of the most copied pistol designs in the world, used extensively by police forces.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 9×19mm</li>
-<li class="list-group-item"><strong>Magazine:</strong> 16 rounds</li>
-<li class="list-group-item"><strong>Usage:</strong> Police</li>
-</ul>
-
-<div class="gun-extra">
-<p>Excellent Grip</p>
-<p>Low Recoil</p>
-<p>Steel Frame</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 6 FN Five-seveN -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/fn57.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">FN Five-seveN</h5>
-<span class="badge bg-warning mb-2">Belgium</span>
-<span class="badge bg-success mb-2">Semi-Automatic</span>
-<p class="card-text">High-capacity lightweight pistol.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/fn57.jpg" class="card-img-top" alt="FN Five-seveN">
+        <div class="card-body">
+            <h5 class="card-title">FN Five-seveN</h5>
+            <div class="mb-2">
+                <span class="badge bg-warning text-dark">BELGIUM</span>
+                <span class="badge bg-success">SEMI-AUTO</span>
+                <span class="badge bg-secondary">5.7x28mm</span>
+            </div>
+            <p class="card-text">High-tech pistol designed to defeat body armor.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Penetration</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                        <label class="text-muted small">Capacity (20)</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Weight</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 100m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 610g</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 208mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Ammo:</strong> 5.7x28mm</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">Designed to companion the P90 SMG, the Five-seveN fires a unique high-velocity round capable of penetrating Kevlar vests. Its large magazine capacity and extremely light weight make it a favorite for tactical teams.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 5.7×28mm</li>
-<li class="list-group-item"><strong>Magazine:</strong> 20 rounds</li>
-<li class="list-group-item"><strong>Usage:</strong> Military</li>
-</ul>
-
-<div class="gun-extra">
-<p>Armor Penetration</p>
-<p>Lightweight Polymer</p>
-<p>Low Recoil</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 7 Walther P99 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/walther-p99.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Walther P99</h5>
-<span class="badge bg-warning mb-2">Germany</span>
-<span class="badge bg-success mb-2">Semi-Automatic</span>
-<p class="card-text">Modern striker-fired pistol.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/walther-p99.jpg" class="card-img-top" alt="Walther P99">
+        <div class="card-body">
+            <h5 class="card-title">Walther P99</h5>
+            <div class="mb-2">
+                <span class="badge bg-dark">GERMANY</span>
+                <span class="badge bg-success">SEMI-AUTO</span>
+                <span class="badge bg-secondary">9x19mm</span>
+            </div>
+            <p class="card-text">Famous as James Bond's modern sidearm of choice.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Ergonomics</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Trigger Tech</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                        <label class="text-muted small">Safety</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 50m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 630g</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 180mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Feature:</strong> AS Trigger</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">The P99 introduced the "Anti-Stress" trigger system and interchangeable backstraps for custom grip sizing. It gained fame in pop culture as the weapon of choice for Pierce Brosnan's James Bond.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 9×19mm</li>
-<li class="list-group-item"><strong>Magazine:</strong> 15 rounds</li>
-<li class="list-group-item"><strong>Usage:</strong> Police</li>
-</ul>
-
-<div class="gun-extra">
-<p>Ergonomic Grip</p>
-<p>Quick Trigger Reset</p>
-<p>Compact Design</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 8 Tokarev TT-33 -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/tt33.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Tokarev TT-33</h5>
-<span class="badge bg-danger mb-2">Russia</span>
-<span class="badge bg-success mb-2">Semi-Automatic</span>
-<p class="card-text">Soviet-era military pistol.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/tt33.jpg" class="card-img-top" alt="Tokarev TT-33">
+        <div class="card-body">
+            <h5 class="card-title">Tokarev TT-33</h5>
+            <div class="mb-2">
+                <span class="badge bg-danger">RUSSIA</span>
+                <span class="badge bg-success">SEMI-AUTO</span>
+                <span class="badge bg-secondary">7.62x25mm</span>
+            </div>
+            <p class="card-text">The rugged Soviet workhorse of World War II.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Penetration</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                        </div>
+                        <label class="text-muted small">Reliability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Ergonomics</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 50m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 854g</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 194mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Action:</strong> Single Action</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">Based on the Browning design but simplified for mass production, the TT-33 fires a very high-velocity cartridge capable of penetrating thick winter clothing and light cover. It lacks a manual safety, reflecting Soviet doctrine.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 7.62×25mm</li>
-<li class="list-group-item"><strong>Magazine:</strong> 8 rounds</li>
-<li class="list-group-item"><strong>Usage:</strong> Military</li>
-</ul>
-
-<div class="gun-extra">
-<p>High Velocity Round</p>
-<p>Simple Mechanism</p>
-<p>Historic Weapon</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 9 Desert Eagle -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/deser-eagle.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Desert Eagle</h5>
-<span class="badge bg-primary mb-2">USA</span>
-<span class="badge bg-success mb-2">Semi-Automatic</span>
-<p class="card-text">High-caliber handgun known for power.</p>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/deser-eagle.jpg" class="card-img-top" alt="Desert Eagle">
+        <div class="card-body">
+            <h5 class="card-title">Desert Eagle</h5>
+            <div class="mb-2">
+                <span class="badge bg-primary">USA/ISRAEL</span>
+                <span class="badge bg-warning text-dark">MAGNUM</span>
+                <span class="badge bg-secondary">.50 AE</span>
+            </div>
+            <p class="card-text">The heavy hitter of the pistol world, famous for pure power.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Damage Output</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                        <label class="text-muted small">Recoil Control</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 20%"></div>
+                        </div>
+                        <label class="text-muted small">Practicality</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 30%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 200m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 2000g</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 273mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Op:</strong> Gas-Operated</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">Unlike most pistols, the Desert Eagle is gas-operated, similar to a rifle. While impractical for combat due to its weight and low capacity, its ability to fire the massive .50 AE round makes it a cultural icon.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> .50 AE</li>
-<li class="list-group-item"><strong>Magazine:</strong> 7 rounds</li>
-<li class="list-group-item"><strong>Usage:</strong> Civilian</li>
-</ul>
-
-<div class="gun-extra">
-<p>Gas Operated</p>
-<p>High Recoil</p>
-<p>Iconic Design</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 10 Browning Hi-Power -->
 <div class="col-md-4">
-<div class="card h-100 shadow">
-<img src="assets/images/browning-hp.jpg" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Browning Hi-Power</h5>
-<span class="badge bg-warning mb-2">Belgium</span>
-<span class="badge bg-success mb-2">Semi-Automatic</span>
-<p class="card-text">One of the most influential pistols ever made.</p>
-
-<ul class="list-group list-group-flush">
-<li class="list-group-item"><strong>Caliber:</strong> 9×19mm</li>
-<li class="list-group-item"><strong>Magazine:</strong> 13 rounds</li>
-<li class="list-group-item"><strong>Usage:</strong> Military & Police</li>
-</ul>
-
-<div class="gun-extra">
-<p>Historic NATO Pistol</p>
-<p>Balanced Design</p>
-<p>Combat Proven</p>
-</div>
-</div>
-</div>
+    <div class="card h-100 shadow" tabindex="0">
+        <img src="assets/images/browning-hp.jpg" class="card-img-top" alt="Browning Hi-Power">
+        <div class="card-body">
+            <h5 class="card-title">Browning Hi-Power</h5>
+            <div class="mb-2">
+                <span class="badge bg-warning text-dark">BELGIUM</span>
+                <span class="badge bg-success">SEMI-AUTO</span>
+                <span class="badge bg-secondary">9x19mm</span>
+            </div>
+            <p class="card-text">The "King of Nines" - the first high-capacity wonder nine.</p>
+            
+            <div class="gun-extra">
+                <hr style="border-color: red; opacity: 0.5;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-danger">PERFORMANCE STATS</h6>
+                        <label class="text-muted small">Reliability</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 90%"></div>
+                        </div>
+                        <label class="text-muted small">Balance</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 95%"></div>
+                        </div>
+                        <label class="text-muted small">Legacy</label>
+                        <div class="progress mb-2" style="height: 6px; background: #333;">
+                            <div class="progress-bar bg-danger" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-danger">TECHNICAL SPECS</h6>
+                        <ul class="list-unstyled small text-light">
+                            <li><i class="fas fa-crosshairs text-danger me-2"></i><strong>Range:</strong> 50m</li>
+                            <li><i class="fas fa-weight-hanging text-danger me-2"></i><strong>Weight:</strong> 1000g</li>
+                            <li><i class="fas fa-ruler-horizontal text-danger me-2"></i><strong>Length:</strong> 197mm</li>
+                            <li><i class="fas fa-cog text-danger me-2"></i><strong>Mag:</strong> 13 Rounds</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border-color: red; opacity: 0.3;">
+                <h6 class="text-danger">HISTORY & SERVICE</h6>
+                <p class="small text-secondary">John Browning's final design, completed by Dieudonné Saive. It was the first widely used pistol with a double-stack magazine (13 rounds), setting the standard for all modern "Wonder Nines" that followed.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 </div>
 </section>
 
+<footer class="bg-dark text-white text-center p-3">
+    <p class="mb-1">© 2026 Firearms of the World</p>
+    <small>This project is for educational purposes only.</small>
+</footer>
 
-</section>
+<a href="enquiry.html" class="enquiry-float">?</a>
 
-<footer class="text-center p-3"><small>Educational purpose only</small></footer>
 </body>
 </html>

@@ -1,338 +1,392 @@
+/* =========================================
+   1. GLOBAL SETTINGS & ANIMATIONS
+   ========================================= */
 body {
     font-family: 'Poppins', sans-serif;
+    cursor: crosshair;
     background:
         linear-gradient(
-            rgba(0,0,0,0.88),
-            rgba(120,0,0,0.75)
+            rgba(0,0,0,0.92),
+            rgba(50,0,0,0.6)
         ),
-        url("../assets/images/8.jpg") no-repeat center fixed;
+        url("../assets/images/bg2.jpg") no-repeat center fixed;
     background-size: cover;
-    color: #eaeaea;
+    color: #e0e0e0;
     min-height: 100vh;
+    overflow-x: hidden;
+    animation: systemBoot 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    opacity: 0;
 }
 
+/* Text Visibility Fixes */
+h1, h2, h3, h4, h5, h6, p, span, div, li, a, input, textarea, select, label, .form-control {
+    color: #e0e0e0 !important;
+}
 
-/* ===== NAVBAR ===== */
+::placeholder { color: #a0a0a0 !important; opacity: 1; }
+.text-muted { color: #b0b0b0 !important; }
+
+@keyframes systemBoot {
+    0% { opacity: 0; transform: translateY(20px) scale(0.98); filter: blur(5px); }
+    100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0a0a0a; border-left: 1px solid #330000; }
+::-webkit-scrollbar-thumb { background: #bd0000; border-radius: 2px; border: 1px solid #ff4d4d; }
+::-webkit-scrollbar-thumb:hover { background: #ff0000; }
+
+::selection { background: #ff4d4d; color: #fff; text-shadow: 0 0 5px rgba(0,0,0,1); }
+
+a, button, .btn, .card, input, select, textarea { cursor: crosshair !important; }
+
+/* =========================================
+   2. NAVBAR & NAVIGATION
+   ========================================= */
 .navbar {
-    backdrop-filter: blur(6px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.8);
-}
-
-.navbar-brand {
     position: relative;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    z-index: 10000; 
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.9);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.3);
 }
 
+.navbar-brand { position: relative; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #fff !important; }
 .navbar-brand::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background: red;
-    transition: width 0.3s ease;
+    content: ""; position: absolute; left: 0; bottom: -4px; width: 0%; height: 2px; background: #ff4d4d; transition: width 0.3s ease;
 }
+.navbar-brand:hover::after { width: 100%; }
 
 .navbar-nav .nav-link {
-    position: relative;
-    margin-left: 12px;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    position: relative; margin-left: 12px; font-weight: 600;
+    color: #d1d1d1 !important;
+    transition: all 0.3s ease;
 }
-
 .navbar-nav .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0%;
-    height: 2px;
-    background: red;
-    transition: width 0.3s ease;
+    content: ""; position: absolute; left: 0; bottom: -6px; width: 0%; height: 2px; background: #ff4d4d; box-shadow: 0 0 8px red; transition: width 0.3s ease;
 }
+.navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.active::after { width: 100%; }
+.navbar-nav .nav-link:hover { color: #ff4d4d !important; text-shadow: 0 0 10px rgba(255,0,0,0.6); transform: translateY(-2px); }
 
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-    width: 100%;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #ff2a2a !important;
-    text-shadow: 0 0 8px rgba(255,0,0,0.7);
-}
-.navbar-nav .nav-link.active {
-    animation: activeGlow 2.5s infinite;
-}
-
-@keyframes activeGlow {
-    0% { text-shadow: 0 0 6px rgba(255,0,0,0.4); }
-    50% { text-shadow: 0 0 14px rgba(255,0,0,0.9); }
-    100% { text-shadow: 0 0 6px rgba(255,0,0,0.4); }
-}
-
+/* Logo Styling */
 .navbar-logo {
-    position: relative;
+    position: relative; width: 48px; height: 48px; border-radius: 50%; padding: 6px;
+    background: radial-gradient(circle, #400000, #000); border: 1px solid #ff0000;
+    box-shadow: 0 0 8px rgba(255,0,0,0.6); transition: all 0.35s ease;
+}
+.navbar-logo:hover { transform: scale(1.12) rotate(-3deg); box-shadow: 0 0 18px rgba(255,0,0,1); }
+
+/* Dropdown Menu */
+.logo-wrapper { position: relative; display: inline-block; }
+.logo-dropdown {
+    position: absolute; top: 140%; left: 0; width: 280px;
+    background: rgba(10, 10, 10, 0.98);
+    border: 1px solid #800000; border-radius: 6px; padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,1);
+    opacity: 0; visibility: hidden; transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 10001;
+}
+.logo-wrapper:hover .logo-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.logo-dropdown h6 { color: #ff4d4d !important; margin-bottom: 8px; font-weight: 700; text-transform: uppercase; }
+.logo-dropdown p { font-size: 0.85rem; color: #bbb !important; margin-bottom: 15px; }
+.logo-dropdown ul { list-style: none; padding: 0; margin: 0; }
+.logo-dropdown ul li { margin-bottom: 8px; }
+.logo-dropdown ul li a {
+    color: #e0e0e0 !important; font-size: 0.9rem; text-decoration: none; transition: 0.2s; display: block; padding: 5px 10px; border-radius: 4px;
+}
+.logo-dropdown ul li a:hover { background: rgba(255, 77, 77, 0.2); color: #ff4d4d !important; padding-left: 15px; }
+.logo-dropdown::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(90deg, transparent, #ff4d4d, transparent); animation: scanLine 2s infinite;
 }
 
-.navbar-logo::after {
-    content: "";
-    position: absolute;
-    inset: -6px;
-    border-radius: 50%;
-    border: 2px solid rgba(255,0,0,0.6);
-    animation: scan 2.5s infinite;
+
+/* --- SLOGAN ANIMATION (The cool slide-out effect) --- */
+.slogan {
+    font-size: 0.6em;       
+    font-weight: 400;      
+    color: #ff4d4d;         
+    opacity: 0;             
+    max-width: 0;           
+    display: inline-block;
+    white-space: nowrap;    
+    overflow: hidden;       
+    vertical-align: middle; 
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    text-shadow: none;     
+    letter-spacing: 2px;
 }
 
-@keyframes scan {
-    0% {
-        transform: scale(0.7);
-        opacity: 0.2;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(1.4);
-        opacity: 0;
-    }
+/* On Hover: Slide it out! */
+.navbar-brand:hover .slogan {
+    opacity: 1;
+    max-width: 300px;       
+    margin-left: 15px;      
+    text-shadow: 0 0 10px rgba(255, 77, 77, 0.5); 
 }
 
-/* ===== HERO SECTION ===== */
-h1 {
-    color: #ff2a2a;
-    text-shadow: 0 0 15px rgba(255,0,0,0.7);
+/* Hide on Mobile so it doesn't break layout */
+@media (max-width: 768px) {
+    .slogan { display: none !important; }
+}
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
+.hero-section {
+    background: linear-gradient(to right, rgba(0,0,0,0.95), rgba(40,0,0,0.8), rgba(0,0,0,0.95));
+    border-top: 2px solid #800000; border-bottom: 2px solid #800000; position: relative; overflow: hidden;
+    z-index: 1;
+}
+.hero-section h1 {
+    font-size: 3.5rem; letter-spacing: 3px; text-transform: uppercase;
+    color: #ff4d4d !important;
+    text-shadow: 2px 2px 0px #000, 0 0 25px rgba(255,0,0,0.4);
+    font-weight: 800;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+.hero-section h1:hover {
+    color: #fff !important;
+    text-shadow: 0 0 20px rgba(255, 77, 77, 0.9);
+    transform: scale(1.02);
+}
+.hero-section p {
+    max-width: 700px; margin: 20px auto 0; font-size: 1.2rem;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 2px black;
+    position: relative; z-index: 2; line-height: 1.6;
 }
 
-section p {
-    color: #f1f1f1;
-}
+/* =========================================
+   4. INTERACTIVE CARD SYSTEM
+   ========================================= */
+.row, section, .container { overflow: visible !important; position: relative; z-index: 1; }
 
-/* ===== CARDS ===== */
 .card {
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-    border: 1px solid darkred;
-    color: #eaeaea;
-    transition: all 0.4s ease;
+    position: relative;
+    height: 100%; 
+    background: rgba(15, 15, 15, 0.95);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    color: #e0e0e0;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer !important;
 }
 
+/* SUPERCHARGED HOVER EFFECTS */
 .card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 0 30px rgba(255,0,0,0.6);
+    transform: translateY(-10px) scale(1.02);
+    border-color: #ff0000;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.95), rgba(40, 0, 0, 0.9));
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.9),
+        0 0 15px rgba(255, 0, 0, 0.4),
+        inset 0 0 10px rgba(255, 0, 0, 0.1);
+    z-index: 10;
 }
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+    border-bottom-color: #ff0000;
+}
+
+.card:hover .card-title {
+    color: #fff !important;
+    text-shadow: 0 0 15px #ff0000;
+    transform: translateX(5px);
+}
+
+/* ACTIVE STATE (Using :focus for No-JS click) */
+.card:focus {
+    border-color: #ff4d4d;
+    background: #000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    transform: scale(1.0); 
+    z-index: 5;
+    outline: none;
+}
+
+/* Card Image */
+.card-img-top {
+    height: 220px; 
+    width: 100%; 
+    object-fit: contain; 
+    padding: 20px;
+    background-color: #050505; 
+    border-bottom: 3px solid #cc0000;
+    transition: all 0.5s ease;
+}
+.card:focus .card-img-top { height: 280px; background-color: #000; }
+
+/* Card Text */
+.card-body { padding: 20px; position: relative; z-index: 2; }
 
 .card-title {
-    color: #ff2a2a;
+    color: #ff4d4d !important; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+    text-shadow: 1px 1px 1px #000;
+    transition: all 0.3s ease;
 }
 
-.card-text {
-    color: #dddddd;
+.badge {
+    font-size: 0.85em; letter-spacing: 0.5px; padding: 6px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    color: #fff !important; 
 }
 
-.card-img-top {
-    height: 200px;
-    object-fit: contain;
-    padding: 10px;
-    filter: drop-shadow(0 0 6px rgba(255,0,0,0.4));
-}
+.card-text { color: #cccccc !important; font-size: 1rem; line-height: 1.5; margin-bottom: 15px; }
 
-/* ===== BUTTONS ===== */
-.btn-dark {
-    background: darkred;
-    border: none;
-}
-
-.btn-dark:hover {
-    background: #ff2a2a;
-    box-shadow: 0 0 15px red;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    background: rgba(0,0,0,0.95);
-    border-top: 2px solid darkred;
-}
-
-/* ===== LOGO ===== */
-.navbar img {
-    margin-right: 10px;
-}
-/* ===== INTERACTIVE INFO (COMMON FOR ALL GUNS) ===== */
+/* EXPANDED INFO SECTION (Hidden by default) */
 .gun-extra {
-    margin-top: 10px;
-    font-size: 0.85rem;
-    color: #ffcccc;
-    max-height: 0;
-    opacity: 0;
+    max-height: 0; 
+    opacity: 0; 
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease;
+    border-top: 1px solid #333;
+    margin-top: 0;
 }
 
-.card:hover .gun-extra {
-    max-height: 120px;
+/* When FOCUSED (Clicked), Expand! */
+.card:focus .gun-extra {
+    max-height: 1200px; 
+    opacity: 1;
+    margin-top: 15px; 
+    padding: 20px;
+    background: #111111;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+.gun-extra h6 { color: #ff4d4d !important; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px; }
+.gun-extra p { color: #e0e0e0 !important; font-size: 0.95rem; line-height: 1.7; }
+.gun-extra li { color: #dcdcdc !important; margin-bottom: 8px; border-bottom: 1px solid #222; padding-bottom: 4px; }
+.gun-extra strong { color: #fff !important; }
+
+/* Progress Bars */
+.progress { background-color: #2a2a2a; border-radius: 2px; }
+.progress-bar { box-shadow: 0 0 5px rgba(255,0,0,0.5); }
+
+/* Holographic Scan Animation */
+.card::before {
+    content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transform: skewX(-25deg); transition: 0.5s; pointer-events: none;
+}
+
+.card:hover::before, .card:focus::before { 
+    animation: scanOnce 0.7s ease forwards;
+    background: linear-gradient(to right, transparent, rgba(255, 0, 0, 0.2), transparent);
+}
+
+@keyframes scanOnce { 0% { left: -100%; } 100% { left: 200%; } }
+
+/* Open/Close Instructions */
+.card::after {
+    content: "[ CLICK TO EXPAND ]";
+    position: absolute; bottom: 10px; right: 15px;
+    color: #666 !important; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
+    pointer-events: none;
+    transition: all 0.3s;
+    opacity: 0; 
+}
+.card:hover::after { opacity: 1; }
+
+.card:focus::after {
+    content: "[ CLICK OUTSIDE TO CLOSE ]";
+    color: #ff4d4d !important; 
     opacity: 1;
 }
 
-/* ===== HERO TITLE SECTION ===== */
-.hero-section {
-    background:
-        linear-gradient(
-            to right,
-            rgba(0,0,0,0.9),
-            rgba(140,0,0,0.85),
-            rgba(0,0,0,0.9)
-        );
-    border-top: 2px solid darkred;
-    border-bottom: 2px solid darkred;
+/* =========================================
+   5. ENQUIRY FORM STYLES
+   ========================================= */
+.tactical-form {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #800000;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 4px;
+    position: relative;
+}
+.tactical-form::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+    background: linear-gradient(90deg, #800000, #ff4d4d, #800000);
+}
+.form-control, .form-select {
+    background-color: #1a1a1a !important;
+    border: 1px solid #444 !important;
+    color: #f0f0f0 !important;
+}
+.form-control:focus, .form-select:focus {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #ff4d4d !important;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.3) !important;
+}
+.form-label { color: #ff4d4d !important; font-weight: 600; text-transform: uppercase; }
+
+/* =========================================
+   6. BUTTONS & FOOTER
+   ========================================= */
+.btn-dark {
+    background: linear-gradient(45deg, #800000, #400000);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff !important; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+.btn-dark:hover {
+    background: #ff4d4d;
+    box-shadow: 0 0 20px rgba(255,0,0,0.6);
+    border-color: #fff;
+    color: #fff !important;
 }
 
-.hero-section h1 {
-    font-size: 3rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #ff2a2a;
-    text-shadow:
-        0 0 10px rgba(255,0,0,0.7),
-        0 0 25px rgba(255,0,0,0.4);
-}
-
-.hero-section p {
-    max-width: 700px;
-    margin: 15px auto 0;
-    font-size: 1.1rem;
-    color: #f1f1f1;
-}
-.hero-section h1::after {
-    content: "";
-    display: block;
-    width: 120px;
-    height: 3px;
-    background: darkred;
-    margin: 15px auto 0;
-}
-@keyframes pulseGlow {
-    0% { box-shadow: 0 0 8px rgba(255,0,0,0.4); }
-    50% { box-shadow: 0 0 18px rgba(255,0,0,0.8); }
-    100% { box-shadow: 0 0 8px rgba(255,0,0,0.4); }
-}
-.navbar-logo {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    padding: 6px;
-    background: radial-gradient(circle, #2a0000, #000);
-    border: 1px solid darkred;
-    box-shadow:
-        0 0 8px rgba(255,0,0,0.6),
-        inset 0 0 6px rgba(255,0,0,0.4);
-    transition: all 0.35s ease;
-}
-
-.navbar-logo:hover {
-    transform: scale(1.12) rotate(-3deg);
-    box-shadow:
-        0 0 18px rgba(255,0,0,0.9),
-        inset 0 0 10px rgba(255,0,0,0.6);
+footer {
+    background: #050505;
+    border-top: 3px solid #800000;
+    padding: 30px 0;
+    color: #888;
 }
 
 .enquiry-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: darkred;
-    color: #fff;
-    font-size: 26px;
-    padding: 12px 16px;
-    border-radius: 50%;
-    text-decoration: none;
-    box-shadow: 0 0 15px red;
-    animation: pulse 2s infinite;
+    position: fixed; bottom: 30px; right: 30px; background: #800000; color: #fff !important;
+    font-size: 24px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; text-decoration: none; box-shadow: 0 0 15px #ff0000; z-index: 1000; transition: all 0.3s ease;
 }
+.enquiry-float:hover { transform: scale(1.1) rotate(90deg); background: #ff4d4d; box-shadow: 0 0 30px #ff4d4d; color: white; }
 
-@keyframes pulse {
-    0% { box-shadow: 0 0 10px red; }
-    50% { box-shadow: 0 0 25px red; }
-    100% { box-shadow: 0 0 10px red; }
-}
-/* logo dropdown menu */
-/* ===== LOGO DROPDOWN MENU ===== */
-.logo-wrapper {
-    position: relative;
-    display: inline-block;
-}
+/* =========================================
+   7. MOBILE OPTIMIZATIONS
+   ========================================= */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.98);
+        padding: 20px;
+        border-bottom: 2px solid #800000;
+    }
 
-/* dropdown hidden by default */
-.logo-dropdown {
-    position: absolute;
-    top: 120%;
-    left: 0;
-    width: 260px;
-    background: rgba(0,0,0,0.95);
-    border: 1px solid darkred;
-    border-radius: 10px;
-    padding: 14px;
-    box-shadow: 0 0 25px rgba(255,0,0,0.6);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    z-index: 999;
-}
+    .hero-section h1 { font-size: 2.2rem !important; letter-spacing: 1px; }
+    .hero-section p { font-size: 1rem; padding: 0 15px; }
 
-/* show on hover */
-.logo-wrapper:hover .logo-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
+   
+    .card-img-top { height: 180px; padding: 10px; }
+    
 
-/* dropdown heading */
-.logo-dropdown h6 {
-    color: #ff2a2a;
-    margin-bottom: 6px;
-    font-weight: 600;
-}
+    .card:hover { transform: none; box-shadow: none; }
+    
 
-/* dropdown description */
-.logo-dropdown p {
-    font-size: 0.8rem;
-    color: #ccc;
-    margin-bottom: 10px;
-}
-
-/* links */
-.logo-dropdown ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.logo-dropdown ul li {
-    margin-bottom: 6px;
-}
-
-.logo-dropdown ul li a {
-    color: #eaeaea;
-    font-size: 0.85rem;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.logo-dropdown ul li a:hover {
-    color: #ff2a2a;
-}
-
-/* subtle top scan line */
-.logo-dropdown::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, red, transparent);
+    .card:focus .gun-extra {
+        padding: 15px;
+    }
+    
+    .enquiry-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 20px; }
 }
